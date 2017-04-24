@@ -1,9 +1,11 @@
 .DS_Store
 
-db-app/db_info_a.php
-db-app/db_pdo_a.php
+db-app/db_info_u.php
+db-app/db_pdo_u.php
 
 nbproject
 npm-debug.log
 node_modules
 .sass-cache
+
+./idea
