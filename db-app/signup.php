@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: rifat
@@ -19,15 +20,16 @@ $email_check = "SELECT * FROM users WHERE email = '". $email."';";
 $signup_sql = "INSERT INTO users (email, username, name, password) VALUES ('" . $email . "','" . $username . "','" . $fullname . "','" . $password . "');";
 
 if(($result = $conn->query($username_check)) && $result->num_rows > 0){
-
-    echo "username already exists";
+    echo "Username already exists";
 }
+
 else if(($result = $conn->query($email_check)) && $result->num_rows > 0){
-
-    echo "email already exists";
-}else if($conn->query($signup_sql) == TRUE){
-
+    echo "Email already exists";
+}
+else if($conn->query($signup_sql) == TRUE){
+    $_SESSION['user']=$username;
     echo "success";
-}else{
-    echo "Something bad happened";
+}
+else{
+    echo "Something went wrong";
 }

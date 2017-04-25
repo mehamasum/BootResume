@@ -19,6 +19,30 @@
                         <form data-parsley-validate class="form-horizontal form-label-left">
 
                             <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Change Avatar
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div style="margin: 10px">
+                                        <img class="img-circle" id="featured_img" src="images/avatar.png" alt="Featured" width="100px" height="100px" />
+                                    </div>
+                                    <input type="file" id="name" onchange="readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+                                    <script>
+                                        function readURL(input) {
+                                            if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+                                                    $('#featured_img').attr('src', e.target.result);
+                                                };
+
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">

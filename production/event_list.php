@@ -1,3 +1,5 @@
+<?php include ('includes/sess.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

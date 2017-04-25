@@ -19,11 +19,14 @@ function login_submit() {
 
         if (data.includes("success")) {
             //REDIRECT
-            sessionStorage.setItem("name",name);
+            //sessionStorage.setItem("name",name);
+            // meha: session stored in php now
+
             window.location.href = "basic.php";
             //document.getElementById("error_message").innerHTML = data;
         }
         else {
+            $("#error_msg_login_well").css('display','block');
             document.getElementById("error_msg_login").innerHTML = data;
         }
 
@@ -52,12 +55,14 @@ function signup_submit() {
 
         if (data.includes("success")) {
             //REDIRECT
-            sessionStorage.setItem("name",username);
+            //sessionStorage.setItem("name",username);
+            // meha: session stored in php now
 
             window.location.href = "basic.php";
             //document.getElementById("error_message").innerHTML = data;
         }
         else {
+            $("#error_msg_signup_well").css('display','block');
             document.getElementById("error_msg_signup").innerHTML = data;
         }
 

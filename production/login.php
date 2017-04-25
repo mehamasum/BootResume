@@ -9,17 +9,8 @@
 
     <title>Elegant Resume </title>
 
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
     <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
 
     <?php include ('includes/top_imports.php') ?>
   </head>
@@ -33,9 +24,11 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form data-parsley-validate action="javascript:login_submit();">
-                <h1>Login Form</h1>
+                <h1>Login</h1>
 
-                <div id="error_msg_login"></div>
+                <div id="error_msg_login_well" class="well" style="display: none">
+                    <div id="error_msg_login"></div>
+                </div>
 
                 <div>
                 <input type="text" id="login_username" class="form-control" placeholder="Username" data-parsley-required="true" />
@@ -44,7 +37,7 @@
                 <input type="password" id="login_password" class="form-control" placeholder="Password" data-parsley-required="true" />
               </div>
               <div>
-                  <button type="submit" class="btn btn-default submit">Submit</button>
+                  <button type="submit" class="btn btn-default submit">Login</button>
 
                   <a class="reset_pass" href="#">Lost your password?</a>
               </div>
@@ -60,8 +53,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                    <h1><i class="fa fa-asterisk"></i> Elegant Resume</h1>
+                    <p>© 2017, Batfia. All Rights Reserved.</p>
                 </div>
               </div>
             </form>
@@ -73,23 +66,28 @@
             <form data-parsley-validate action="javascript:signup_submit();">
                 <h1>Create Account</h1>
 
-                <div id="error_msg_signup"></div>
-
-                <div>
-                    <input id="signup_fullname" type="text" class="form-control" placeholder="Full Name" data-parsley-required="true" />
+                <div id="error_msg_signup_well" class="well" style="display: none">
+                    <div id="error_msg_signup"></div>
                 </div>
+
 
                 <div>
                     <input id="signup_username" type="text" class="form-control" placeholder="Username" data-parsley-required="true" />
                 </div>
 
                 <div>
-                    <input id="signup_email" type="email" class="form-control" placeholder="Email" data-parsley-required="true" />
+                    <input id="signup_password" type="password" class="form-control" placeholder="Password" data-parsley-required="true" />
                 </div>
 
                 <div>
-                    <input id="signup_password" type="password" class="form-control" placeholder="Password" data-parsley-required="true" />
-                 </div>
+                    <input id="signup_fullname" type="text" class="form-control" placeholder="Full Name" data-parsley-required="true" />
+                </div>
+
+                <div>
+                    <input id="signup_email" type="email" class="form-control" placeholder="Email" data-parsley-required="true" />
+                </div>
+
+
 
                 <div>
                     <button type="submit" class="btn btn-default submit">Sign Up</button>
@@ -98,7 +96,7 @@
                 <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Already a member ?
+                <p class="change_link">Already a member?
                   <a href="#signin" class="to_register"> Log in </a>
                 </p>
 
@@ -106,8 +104,8 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-asterisk"></i> Elegant Resume</h1>
+                  <p>© 2017, Batfia. All Rights Reserved.</p>
                 </div>
               </div>
             </form>
