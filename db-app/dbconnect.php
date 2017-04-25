@@ -1,5 +1,5 @@
 <?php
-	$a_host= 'lamp-84ee929b';
+	$a_host= 'localhost';
 	$a_user= 'elegantresview';
 	$a_pass= 'pushpopteambatfia';
 	$a_db= 'elegantres';
