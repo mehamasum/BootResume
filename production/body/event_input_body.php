@@ -19,42 +19,197 @@
 
                             <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                 <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Details</a>
+                                    <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Info</a>
                                     </li>
 
                                     <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Description</a>
                                     </li>
-
-                                    <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab2" data-toggle="tab" aria-expanded="false">Image</a>
-                                    </li>
-
-                                    <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab3" data-toggle="tab" aria-expanded="false">Location</a>
-                                    </li>
-
-                                    <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab4" data-toggle="tab" aria-expanded="false">Links</a>
-                                    </li>
-
-                                    <li role="presentation" class=""><a href="#tab_content3" role="tab" id="profile-tab5" data-toggle="tab" aria-expanded="false">Embed Video</a>
-                                    </li>
                                 </ul>
                                 <div id="myTabContent" class="tab-content">
                                     <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
-                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                                            synth. Cosby sweater eu banh mi, qui irure terr.</p>
+                                        <div class="clearfix"></div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Event Name
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Event Sub Title
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name" placeholder="Degree, area of work etc." class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" >Start Date
+                                            </label>
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                                <select class="form-control">
+                                                    <option>Choose option</option>
+                                                    <option>Option one</option>
+                                                    <option>Option two</option>
+                                                    <option>Option three</option>
+                                                    <option>Option four</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                                <select class="form-control">
+                                                    <option>Choose option</option>
+                                                    <option>Option one</option>
+                                                    <option>Option two</option>
+                                                    <option>Option three</option>
+                                                    <option>Option four</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">End Date
+                                                <small>(Leave empty if none)</small>
+                                            </label>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                                <select class="form-control">
+                                                    <option>Choose option</option>
+                                                    <option>Option one</option>
+                                                    <option>Option two</option>
+                                                    <option>Option three</option>
+                                                    <option>Option four</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                                <select class="form-control">
+                                                    <option>Choose option</option>
+                                                    <option>Option one</option>
+                                                    <option>Option two</option>
+                                                    <option>Option three</option>
+                                                    <option>Option four</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ln_solid"></div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-9 col-sm-9 col-xs-12 pull-right" for="name">Add Optional Tags
+                                                <br/> <short>(use comma to separate multiple tags in a set) </short>
+                                            </label>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Skill Tags
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Role Tags
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Type/Subject Tags
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Status Tags
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Misc. Tags
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                            </div>
+                                        </div>
                                     </div>
+
                                     <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
-                                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                                            booth letterpress, commodo enim craft beer mlkshk aliquip</p>
-                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                                            synth. Cosby sweater eu banh mi, qui irure terr.</p>
-                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                                            synth. Cosby sweater eu banh mi, qui irure terr.</p>
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
-                                        <p>xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                                            booth letterpress, commodo enim craft beer mlkshk </p>
-                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                                            synth. Cosby sweater eu banh mi, qui irure terr.</p>
+                                        <div class="clearfix"></div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Featured Image
+                                                <small>(800x600 px)</small>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <div class="well">
+                                                    <img class="img-responsive" id="featured_img" src="images/media.jpg" alt="Featured" width="300px" />
+                                                </div>
+                                                <input type="file" id="name" onchange="readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+                                                <script>
+                                                    function readURL(input) {
+                                                        if (input.files && input.files[0]) {
+                                                            var reader = new FileReader();
+
+                                                            reader.onload = function (e) {
+                                                                $('#featured_img').attr('src', e.target.result);
+                                                            };
+
+                                                            reader.readAsDataURL(input.files[0]);
+                                                        }
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="objective">Description (1000 chars max)</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <textarea id="objective" class="form-control" rows="10" placeholder='rows="3"' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                                      data-parsley-validation-threshold="10"></textarea>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">Embed Youtube video
+                                            </label>
+
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name" placeholder="Action Title" class="form-control col-md-7 col-xs-12">
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">Action Button Title
+                                            </label>
+
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name" placeholder="Action Title" class="form-control col-md-7 col-xs-12">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">Action Url
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name" placeholder="Url" class="form-control col-md-7 col-xs-12">
+                                            </div>
+
+                                        </div>
+
+
                                     </div>
                                 </div>
                             </div>
