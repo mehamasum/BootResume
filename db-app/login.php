@@ -9,8 +9,8 @@
 require_once('dbconnect_v.php');
 
 $username = $_POST['username'];
-//$password = md5($_POST['pass']);
-$password = $_POST['password'];
+$password = md5($_POST['pass']);
+//$password = $_POST['password'];
 
 $sql = "SELECT * FROM users WHERE username = '". $username."' AND password= '".$password."';";
 
