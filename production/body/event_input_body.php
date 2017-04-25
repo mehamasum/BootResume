@@ -146,11 +146,11 @@
                                         <div class="clearfix"></div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Featured Image
-                                                <small>(800x600 px)</small>
+                                                <small>(2:1 ratio)</small>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <div class="well">
-                                                    <img class="img-responsive" id="featured_img" src="images/media.jpg" alt="Featured" width="300px" />
+                                                <div style="margin-bottom: 10px">
+                                                    <img id="featured_img" src="images/media.jpg" alt="Featured" width="300px" height="150px" />
                                                 </div>
                                                 <input type="file" id="name" onchange="readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
                                                 <script>
