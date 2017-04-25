@@ -25,7 +25,7 @@
 
         <?php
         // "<script> console.log('". $_SERVER['PHP_SELF']."'); </script>";
-        include ('body/home_body.php')
+        include('body/basic_body.php')
         ?>
 
         <?php include ('includes/footer.php') ?>
