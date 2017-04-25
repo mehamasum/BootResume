@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Elegant Resume </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +20,8 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+
+    <?php include ('includes/top_imports.php') ?>
   </head>
 
   <body class="login">
@@ -30,17 +32,21 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
-              <h1>Login Form</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+            <form data-parsley-validate action="javascript:login_submit();">
+                <h1>Login Form</h1>
+
+                <div id="error_msg_login"></div>
+
+                <div>
+                <input type="text" id="login_username" class="form-control" placeholder="Username" data-parsley-required="true" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" id="login_password" class="form-control" placeholder="Password" data-parsley-required="true" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
-                <a class="reset_pass" href="#">Lost your password?</a>
+                  <button type="submit" class="btn btn-default submit">Submit</button>
+
+                  <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 
               <div class="clearfix"></div>
@@ -64,22 +70,32 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
-              <h1>Create Account</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
-              </div>
+            <form data-parsley-validate action="javascript:signup_submit();">
+                <h1>Create Account</h1>
 
-              <div class="clearfix"></div>
+                <div id="error_msg_signup"></div>
+
+                <div>
+                    <input id="signup_fullname" type="text" class="form-control" placeholder="Full Name" data-parsley-required="true" />
+                </div>
+
+                <div>
+                    <input id="signup_username" type="text" class="form-control" placeholder="Username" data-parsley-required="true" />
+                </div>
+
+                <div>
+                    <input id="signup_email" type="email" class="form-control" placeholder="Email" data-parsley-required="true" />
+                </div>
+
+                <div>
+                    <input id="signup_password" type="password" class="form-control" placeholder="Password" data-parsley-required="true" />
+                 </div>
+
+                <div>
+                    <button type="submit" class="btn btn-default submit">Sign Up</button>
+                </div>
+
+                <div class="clearfix"></div>
 
               <div class="separator">
                 <p class="change_link">Already a member ?
@@ -99,5 +115,10 @@
         </div>
       </div>
     </div>
+
+
+
+    <?php include ('includes/bottom_imports.php') ?>
+    <script type="text/javascript" src="js/form_on_submit.js"></script>
   </body>
 </html>
