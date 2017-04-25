@@ -7,19 +7,6 @@
 
         <div class="clearfix"></div>
 
-        <!-- menu profile quick info -->
-        <div class="profile clearfix">
-            <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-            </div>
-            <div class="profile_info">
-                <span>Welcome</span>
-                <h2>John Doe</h2>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <!-- /menu profile quick info -->
-
         <br />
 
         <!-- sidebar menu -->
@@ -27,12 +14,14 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-home"></i> Basic Info </a></li>
-                    <li><a><i class="fa fa-home"></i> Education </a></li>
-                    <li><a><i class="fa fa-home"></i> Experience </a></li>
-                    <li><a><i class="fa fa-home"></i> Projects </a></li>
-                    <li><a><i class="fa fa-home"></i> Publications </a></li>
-                    <li><a><i class="fa fa-home"></i> Social </a></li>
+                    <li><a href="basic.php"><i class="fa fa-home"></i> Basic Info </a></li>
+                    <li><a href="event_list.php?src=EDU"><i class="fa fa-home"></i> Education </a></li>
+                    <li><a href="event_list.php?src=EXPR"><i class="fa fa-home"></i> Experience </a></li>
+                    <li><a href="event_list.php?src=PRJ"><i class="fa fa-home"></i> Projects </a></li>
+                    <li><a href="event_list.php?src=PUB"><i class="fa fa-home"></i> Publications </a></li>
+                    <li><a href="event_list.php?src=HON"><i class="fa fa-home"></i> Honors </a></li>
+                    <li><a href="event_list.php?src=ACT"><i class="fa fa-home"></i> Activities </a></li>
+                    <li><a href="social.php"><i class="fa fa-home"></i> Social </a></li>
 
                 </ul>
             </div>

@@ -14,7 +14,7 @@
 
 </head>
 
-<body class="nav-md">
+<body class="nav-md footer_fixed">
 <div class="container body">
     <div class="main_container">
 
@@ -25,7 +25,7 @@
 
         <?php
         // "<script> console.log('". $_SERVER['PHP_SELF']."'); </script>";
-        include ('body/social_body.php')
+        include ('body/event_input_body.php')
         ?>
 
         <?php include ('includes/footer.php') ?>
