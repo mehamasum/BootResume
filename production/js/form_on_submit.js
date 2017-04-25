@@ -9,7 +9,7 @@ function login_submit() {
     var name = $("#login_username").val();
     var pass = $("#login_password").val();
 
-
+    document.getElementById("error_msg").innerHTML = "hello";
     $.post("../db-app/login.php", {
 
         username: name,
@@ -24,7 +24,7 @@ function login_submit() {
             //document.getElementById("error_message").innerHTML = data;
         }
         else {
-            document.getElementById("error_message").innerHTML = data;
+            document.getElementById("error_msg").innerHTML = data;
         }
 
 
