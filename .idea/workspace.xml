@@ -82,10 +82,10 @@
         <entry file="file://$PROJECT_DIR$/db-app/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
                 <element signature="e#6#86#0#PHP" expanded="true" />
-                <marker date="1493131205364" expanded="true" signature="230:313" ph="SELECT * FRO... users" />
+                <marker date="1493131321436" expanded="true" signature="234:317" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -423,7 +423,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31551000" />
+    <option name="totallyTimeSpent" value="31673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -865,10 +865,10 @@
     <entry file="file://$PROJECT_DIR$/db-app/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <element signature="e#6#86#0#PHP" expanded="true" />
-            <marker date="1493131205364" expanded="true" signature="230:313" ph="SELECT * FRO... users" />
+            <marker date="1493131321436" expanded="true" signature="234:317" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
