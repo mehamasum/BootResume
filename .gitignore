@@ -1,8 +1,5 @@
 .DS_Store
 
-db-app/dbconnect_v.php
-db-app/dbconnect_u.php
-
 nbproject
 npm-debug.log
 node_modules
