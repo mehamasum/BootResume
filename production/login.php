@@ -35,7 +35,7 @@
             <form data-parsley-validate action="javascript:login_submit();">
                 <h1>Login Form</h1>
 
-                <div id="error_msg">error</div>
+                <div id="error_msg_login"></div>
 
                 <div>
                 <input type="text" id="login_username" class="form-control" placeholder="Username" data-parsley-required="true" />
@@ -70,22 +70,32 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
-              <h1>Create Account</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
-              </div>
+            <form data-parsley-validate action="javascript:signup_submit();">
+                <h1>Create Account</h1>
 
-              <div class="clearfix"></div>
+                <div id="error_msg_signup"></div>
+
+                <div>
+                    <input id="signup_fullname" type="text" class="form-control" placeholder="Full Name" data-parsley-required="true" />
+                </div>
+
+                <div>
+                    <input id="signup_username" type="text" class="form-control" placeholder="Username" data-parsley-required="true" />
+                </div>
+
+                <div>
+                    <input id="signup_email" type="email" class="form-control" placeholder="Email" data-parsley-required="true" />
+                </div>
+
+                <div>
+                    <input id="signup_password" type="password" class="form-control" placeholder="Password" data-parsley-required="true" />
+                 </div>
+
+                <div>
+                    <button type="submit" class="btn btn-default submit">Sign Up</button>
+                </div>
+
+                <div class="clearfix"></div>
 
               <div class="separator">
                 <p class="change_link">Already a member ?
