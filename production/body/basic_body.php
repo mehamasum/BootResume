@@ -22,7 +22,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Change Avatar
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div style="margin: 10px">
+                                    <div  class="text-center well" style="margin-bottom: 10px">
                                         <img class="img-circle" id="featured_img" src="images/avatar.png" alt="Featured" width="100px" height="100px" />
                                     </div>
                                     <input type="file" id="name" onchange="readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
@@ -68,9 +68,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="objective">Objective (100 chars max)</label>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="objective">Objective (200 chars max)</label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <textarea id="objective" class="form-control" data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                    <textarea id="objective" class="form-control" data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="200" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
                                               data-parsley-validation-threshold="10"></textarea>
                                 </div>
 
