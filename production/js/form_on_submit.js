@@ -43,6 +43,7 @@ function signup_submit() {
     var fullname = $("#signup_fullname").val();
     var email = $("#signup_email").val();
 
+
     // document.getElementById("error_msg").innerHTML = "hello";
     $.post("../db-app/signup.php", {
 
