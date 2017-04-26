@@ -1,4 +1,8 @@
-<?php include ('includes/sess.php') ?>
+<?php include ('includes/sess.php');
+
+//TODO: risky call, assuming it is already set :/
+$schedule_id = "58fa07bbc7ddaa3b7464e0ac"; //$_SESSION['schedule_id'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,11 +27,6 @@
         <?php include ('includes/menu.php') ?>
 
         <?php include ('includes/top_nav.php') ?>
-
-        <?php
-        //TODO: risky call, assuming it is already set :/
-        $schedule_id = "58fa07bbc7ddaa3b7464e0ac"; //$_SESSION['schedule_id'];
-        ?>
 
 
         <!-- page content -->

@@ -1,4 +1,19 @@
-<?php include ('includes/sess.php') ?>
+<?php include ('includes/sess.php');
+
+$edit = false;
+
+//TODO: risky call, assuming it is already set :/
+$schedule_id = "58fa07bbc7ddaa3b7464e0ac"; //$_SESSION['schedule_id'];
+
+if(isset($_GET['eventId'])) {
+    $edit = true;
+    $actionUrl = "javascript:update_event('". $schedule_id. "', '". $_GET['eventId']. "', 'EDU');";
+}
+else {
+    $actionUrl = "javascript:create_event('". $schedule_id. "', 'EDU');";
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,12 +38,6 @@
         <?php include ('includes/menu.php') ?>
 
         <?php include ('includes/top_nav.php') ?>
-
-        <?php
-            //TODO: risky call, assuming it is already set :/
-            $schedule_id = "58fa07bbc7ddaa3b7464e0ac"; //$_SESSION['schedule_id'];
-        ?>
-
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -56,7 +65,7 @@
 
                                 <!--form-->
 
-                                <form data-parsley-validate action="javascript:create_event('<?php echo $schedule_id?>', 'EDU');" class="form-horizontal form-label-left">
+                                <form data-parsley-validate action="<?php echo $actionUrl?>" class="form-horizontal form-label-left">
 
                                     <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                         <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
@@ -301,7 +310,17 @@
 </div>
 
 <script src="whenhub_api/event.js"></script>
-<?php include ('includes/bottom_imports.php') ?>
+<?php include ('includes/bottom_imports.php');
+    if($edit) { ?>
+        <script>
+            window.onload = function() {
+                console.log("ready");
+                get_details('<?php echo $schedule_id?>', "<?php echo $_GET['eventId']?>", "EDU");
+            };
+        </script>
+<?php
+    }
+?>
 
 </body>
 </html>

@@ -240,7 +240,7 @@ function get_events(scheduleId, type) {
 
                         var endFound = obj["when"]["endDate"];
 
-                        var editFunc = "get_details('"+ scheduleId +"', '"+obj["id"]+"', '"+type+"')";
+                        var editFunc = "education_input.php?eventId="+obj["id"];
                         var delFunc = "delete_event('"+ scheduleId +"', '"+obj["id"]+"', '"+type+"')";
                         console.log(delFunc);
 
@@ -253,7 +253,7 @@ function get_events(scheduleId, type) {
                          "<td><a>"+obj['name']+"</a><br /></td>"+
                          "<td><a>"+obj['when']['startDate']+" to "+endFound+"</a></td>"+
                          "<td>"+
-                         "<button onclick=\""+ editFunc +"\" class='btn btn-info btn-xs'><i class='fa fa-pencil'></i> Edit </button>"+
+                         "<a href='"+editFunc+"' class='btn btn-info btn-xs'><i class='fa fa-pencil'></i> Edit </a>"+
                          "<button onclick=\""+ delFunc +"\" class='btn btn-danger btn-xs'><i class='fa fa-trash-o'></i> Delete </button>"+
                          "</td>"+
                          "</tr>";
@@ -293,8 +293,15 @@ function get_details(scheduleId, eventId, type) {
             console.log(xhr.status+" "+statusText);
         },
         success: function (data) {
-            
+            console.log(data);
+            new PNotify({
+                title: 'Success',
+                text: 'Removed from your resume',
+                type: 'success',
+                styling: 'bootstrap3'
+            });
 
+            //TODO parse and set gui
         },
         error: function(xhr, statusText, err){
             console.log("Error: " + xhr.status);
