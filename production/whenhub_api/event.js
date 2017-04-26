@@ -5,11 +5,11 @@
 var accessToken="i7LM4k7JcSKs4ucCpxpgNPcs3i1kRbNKyUE8aPGKZzZWASagz9uZiuLgmgDgBJzY";
 var userid="58fa07bbc7ddaa3b7464e0aa";
 
-function create_event() {
+function create_event(scheduleId, type) {
 
     NProgress.start();
 
-    var scheduleId = "58fa07bbc7ddaa3b7464e0ac";
+    //var scheduleId = "58fa07bbc7ddaa3b7464e0ac";
     var event_create_url= "https://api.whenhub.com/api/schedules/"+scheduleId+"/events?access_token="+accessToken;
 
 
@@ -55,8 +55,11 @@ function create_event() {
 
     if(em==="00" && ey==="0000")
         obj.when.endDate = null;
-    else
+    else {
+        if(em==="00") em="01";
+        if(ey==="0000") ey=new Date().getFullYear();
         obj.when.endDate = ey+"-"+em;
+    }
 
     obj.name = $("#name").val();
 
@@ -65,6 +68,7 @@ function create_event() {
         obj.description  = des;
 
     var tagArr = [];
+    tagArr.push("EVENT###"+type);
 
     var skill = $("#skill").val();
     var skillz =[];
@@ -113,12 +117,20 @@ function create_event() {
     for(idx=0; idx<miscz.length; idx++)
         tagArr.push(TAGS[4]+miscz[idx]);
 
-    if(tagArr.length>0)
-        obj.tags = tagArr;
+    //if(tagArr.length>0)
+    obj.tags = tagArr;
 
-    //obj.customFieldData = {};
-    //obj.customFieldData.type = "EDU";
-    //obj.customFieldData.cg = "4.0";
+
+    if(type==="EDU") {
+        var degree = $("#subtitle1").val();
+        var area = $("#subtitle2").val();
+
+        obj.customFieldData = {};
+        obj.customFieldData.degree = degree;
+        obj.customFieldData.area = area;
+    }
+
+
 
     var primaryAction ={};
     primaryAction.label = $("#btn_label").val();
@@ -147,12 +159,15 @@ function create_event() {
         success: function (data) {
             console.log(data['id']);
             new PNotify({
-                title: 'Event added successfully',
+                title: 'Added successfully',
                 text: 'Redirecting',
                 type: 'success',
                 styling: 'bootstrap3'
             });
-            window.location.href = "event_list.php";
+            var redir= "basic.php";
+            if(type==="EDU")
+                redir = "education.php";
+            window.location.href = redir;
         },
         error: function(xhr, statusText, err){
             console.log("Error: " + xhr.status);
@@ -164,4 +179,103 @@ function create_event() {
             });
         }
     });
+}
+
+function get_events(scheduleId, type) {
+
+    NProgress.start();
+
+    //var scheduleId = "58fa07bbc7ddaa3b7464e0ac";
+    var event_create_url= "https://api.whenhub.com/api/schedules/"+scheduleId+"/events?access_token="+accessToken;
+
+
+    /*
+     {
+     "when": {
+     "period": "month",
+     "startDate": "2017-03",        --> Start Date
+     "endDate": null --> End Date
+     },
+     "name": "Test Event api test",  ---> Event Name
+     "description": "string",       ---> Description
+     "tags": [
+     "string"                    --> Type###String
+     ],
+
+     "customFieldData": {           --> Event Sub Titles
+     "type": "education",
+     "cg": "4.0"
+
+     },
+     "primaryAction": {
+     "name/label": "string",    --> Action Button Title
+     "url": "string"            --> Action Url
+     },
+     }
+     */
+
+    $.ajax({
+        type: "GET",
+        url: event_create_url,
+
+        complete: function(xhr, statusText){
+            NProgress.done();
+            NProgress.remove();
+            console.log(xhr.status+" "+statusText);
+        },
+        success: function (data) {
+            var cnt = 0;
+            var body = $("#table_body");
+            console.log(data.length);
+            for(var idx =0; idx<data.length; idx++) {
+                var obj = data[idx];
+                var tag = obj["tags"];
+                if (!("undefined" === typeof tag)) {
+                    if(tag[0]==="EVENT###"+type) {
+
+                        cnt++;
+
+                        var endFound = obj["when"]["endDate"];
+
+                        var editFunc = "get_details('"+ scheduleId +"', '"+obj["id"]+"', '"+type+"')";
+                        var delFunc = "delete_event('"+ scheduleId +"', '"+obj["id"]+"')";
+                        console.log(delFunc);
+
+                        if (endFound===null)
+                            endFound = "Present";
+
+                        var row = ""+
+                         "<tr>"+
+                         "<td>"+cnt+"</td>"+
+                         "<td><a>"+obj['name']+"</a><br /></td>"+
+                         "<td><a>"+obj['when']['startDate']+" to "+endFound+"</a></td>"+
+                         "<td>"+
+                         "<button onclick=\""+ editFunc +"\" class='btn btn-info btn-xs'><i class='fa fa-pencil'></i> Edit </button>"+
+                         "<button onclick=\""+ delFunc +"\" class='btn btn-danger btn-xs'><i class='fa fa-trash-o'></i> Delete </button>"+
+                         "</td>"+
+                         "</tr>";
+
+                        body.append(row);
+                    }
+                }
+            }
+        },
+        error: function(xhr, statusText, err){
+            console.log("Error: " + xhr.status);
+            new PNotify({
+                title: 'Error :(',
+                text: statusText,
+                type: 'error',
+                styling: 'bootstrap3'
+            });
+        }
+    });
+}
+
+function get_details(scheduleId, eventId, type) {
+    console.log(scheduleId+" "+eventId+" "+type);
+}
+
+function delete_event(scheduleId, eventId) {
+    console.log(scheduleId+" "+eventId);
 }

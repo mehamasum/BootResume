@@ -24,6 +24,11 @@
 
         <?php include ('includes/top_nav.php') ?>
 
+        <?php
+            //TODO: risky call, assuming it is already set :/
+            $schedule_id = "58fa07bbc7ddaa3b7464e0ac"; //$_SESSION['schedule_id'];
+        ?>
+
 
         <!-- page content -->
         <div class="right_col" role="main">
@@ -31,6 +36,12 @@
                 <div class="page-title">
                     <div class="title_left">
                         <h3>School Details</h3>
+                    </div>
+
+                    <div class="title_right">
+                        <div class="col-md-5 col-sm-5 col-xs-12 pull-right">
+                            <a href="#" class="btn btn-block btn-info"><i class="fa fa-info-circle"></i> Help </a>
+                        </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -42,7 +53,10 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                <form data-parsley-validate action="javascript:create_event();" class="form-horizontal form-label-left">
+
+                                <!--form-->
+
+                                <form data-parsley-validate action="javascript:create_event('<?php echo $schedule_id?>', 'EDU');" class="form-horizontal form-label-left">
 
                                     <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                         <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
@@ -64,10 +78,18 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">School Sub Title
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">Degree<span class="required">*</span>
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input type="text" id="subtitle1" placeholder="Degree, area of work etc." class="form-control col-md-7 col-xs-12">
+                                                        <input data-parsley-required="true" type="text" id="subtitle1" class="form-control col-md-7 col-xs-12">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle2">Area of Study<span class="required">*</span>
+                                                    </label>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <input data-parsley-required="true" type="text" id="subtitle2" class="form-control col-md-7 col-xs-12">
                                                     </div>
                                                 </div>
 
@@ -223,10 +245,9 @@
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description">Description (1000 chars max)</label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="description" class="form-control" rows="10" placeholder='Small description about the School' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                                        <textarea id="description" class="form-control" rows="10" placeholder='Small description about your experience here...' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
                                                       data-parsley-validation-threshold="10"></textarea>
                                                     </div>
-
                                                 </div>
 
 
@@ -237,7 +258,7 @@
                                                     </label>
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input type="text" id="btn_label" placeholder="Title" class="form-control col-md-7 col-xs-12">
+                                                        <input type="text" id="btn_label" placeholder="i.e: Visit School Website..." class="form-control col-md-7 col-xs-12">
                                                     </div>
 
                                                 </div>
@@ -259,9 +280,9 @@
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                            <button class="btn btn-primary" type="button">Cancel</button>
+                                            <button onclick="location.href='education.php';"class="btn btn-primary" type="button">Cancel</button>
                                             <button class="btn btn-primary" type="reset">Reset</button>
-                                            <button type="submit" class="btn btn-success">Submit</button>
+                                            <button type="submit" class="btn btn-success">Add New School</button>
                                         </div>
                                     </div>
 
@@ -273,14 +294,14 @@
                 </div>
             </div>
         </div>
-
-        <script src="whenhub_api/event.js"></script>
         <!-- /page content -->
 
         <?php include ('includes/footer.php') ?>
     </div>
 </div>
 
+<script src="whenhub_api/event.js"></script>
 <?php include ('includes/bottom_imports.php') ?>
+
 </body>
 </html>
