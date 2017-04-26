@@ -11,11 +11,11 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Add details info about this event</h2>
+                        <h4>Required fields are marked with *</h4>
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <form data-parsley-validate class="form-horizontal form-label-left">
+                        <form data-parsley-validate action="javascript:create_event();" class="form-horizontal form-label-left">
 
                             <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                 <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
@@ -29,41 +29,45 @@
                                     <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                                         <div class="clearfix"></div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Event Name
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Event Name<span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                                <input data-parsley-required="true" type="text" id="name" class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Event Sub Title
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">Event Sub Title
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name" placeholder="Degree, area of work etc." class="form-control col-md-7 col-xs-12">
+                                                <input type="text" id="subtitle1" placeholder="Degree, area of work etc." class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
 
 
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" >Start Date
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" >Start Date<span class="required">*</span>
                                             </label>
                                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                                <select class="form-control">
-                                                    <option>Choose option</option>
-                                                    <option>Option one</option>
-                                                    <option>Option two</option>
-                                                    <option>Option three</option>
-                                                    <option>Option four</option>
+                                                <select id="startMonth" class="form-control">
+                                                    <option value="00">Choose Month</option>
+                                                    <?php
+                                                        $months = array(1 => 'Jan', 2 => 'Feb', 3 => 'Mar', 4 => 'Apr', 5 => 'May', 6 => 'Jun', 7 => 'Jul', 8 => 'Aug', 9 => 'Sep', 10 => 'Oct', 11 => 'Nov', 12 => 'Dec');
+                                                        foreach ($months as $num => $name) {
+                                                            printf('<option value="%02u">%s</option>', $num, $name);
+                                                        }
+                                                    ?>
                                                 </select>
                                             </div>
                                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                                <select class="form-control">
-                                                    <option>Choose option</option>
-                                                    <option>Option one</option>
-                                                    <option>Option two</option>
-                                                    <option>Option three</option>
-                                                    <option>Option four</option>
+                                                <select data-parsley-required="true" id="startYear" class="form-control">
+                                                    <option value="0000">Choose Year</option>
+                                                    <?php
+                                                        $year = intval(date("Y"));
+                                                        for ($i=$year; $i>1955; $i--) {
+                                                            printf('<option value="%04u">%s</option>', $i, strval($i));
+                                                        }
+                                                    ?>
                                                 </select>
                                             </div>
                                         </div>
@@ -75,21 +79,25 @@
                                             </label>
 
                                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                                <select class="form-control">
-                                                    <option>Choose option</option>
-                                                    <option>Option one</option>
-                                                    <option>Option two</option>
-                                                    <option>Option three</option>
-                                                    <option>Option four</option>
+                                                <select id="endMonth" class="form-control">
+                                                    <option value="00">Choose Month</option>
+                                                    <?php
+                                                    $months = array(1 => 'Jan', 2 => 'Feb', 3 => 'Mar', 4 => 'Apr', 5 => 'May', 6 => 'Jun', 7 => 'Jul', 8 => 'Aug', 9 => 'Sep', 10 => 'Oct', 11 => 'Nov', 12 => 'Dec');
+                                                    foreach ($months as $num => $name) {
+                                                        printf('<option value="%02u">%s</option>', $num, $name);
+                                                    }
+                                                    ?>
                                                 </select>
                                             </div>
                                             <div class="col-md-3 col-sm-3 col-xs-6">
-                                                <select class="form-control">
-                                                    <option>Choose option</option>
-                                                    <option>Option one</option>
-                                                    <option>Option two</option>
-                                                    <option>Option three</option>
-                                                    <option>Option four</option>
+                                                <select id="endYear" class="form-control">
+                                                    <option value="0000">Choose Year</option>
+                                                    <?php
+                                                    $year = intval(date("Y"));
+                                                    for ($i=$year; $i>1955; $i--) {
+                                                        printf('<option value="%04u">%s</option>', $i, strval($i));
+                                                    }
+                                                    ?>
                                                 </select>
                                             </div>
 
@@ -99,45 +107,50 @@
 
                                         <div class="form-group">
                                             <label class="col-md-9 col-sm-9 col-xs-12 pull-right" for="name">Add Optional Tags
-                                                <br/> <short>(use comma to separate multiple tags in a set) </short>
+                                                <br/> <short>(use comma or empty space to separate multiple tags) </short>
                                             </label>
                                         </div>
 
 
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Skill Tags
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="skill">Skill Tags
+                                                <small style="color: #00AA88; font-size: medium">&#9724;</small>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                                <input type="text" id="skill"  class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Role Tags
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="role">Role Tags
+                                                <small style="color: #00AA88; font-size: medium">&#9724;</small>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                                <input type="text" id="role"  class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Type/Subject Tags
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subject">Type/Subject Tags
+                                                <small style="color: #00AA88; font-size: medium">&#9724;</small>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                                <input type="text" id="subject"  class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Status Tags
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="status">Status Tags
+                                                <small style="color: #00AA88; font-size: medium">&#9724;</small>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                                <input type="text" id="status"  class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Misc. Tags
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="misc">Misc. Tags
+                                                <small style="color: #00AA88; font-size: medium">&#9724;</small>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                                <input type="text" id="misc"  class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
                                     </div>
@@ -145,14 +158,14 @@
                                     <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
                                         <div class="clearfix"></div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Featured Image
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="image_picker">Add Featured Image
                                                 <small>(2:1 ratio)</small>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div class="text-center well" style="margin-bottom: 10px">
                                                     <img id="featured_img" src="images/media.jpg" alt="Featured" width="300px" height="150px" />
                                                 </div>
-                                                <input type="file" id="name" onchange="readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+                                                <input type="file" id="image_picker" onchange="readURL(this);" class="form-control imgUpload col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
                                                 <script>
                                                     function readURL(input) {
                                                         if (input.files && input.files[0]) {
@@ -169,42 +182,44 @@
                                             </div>
                                         </div>
 
+                                        <div style="display: none" class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="video">Embed Youtube video
+                                            </label>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="objective">Description (1000 chars max)</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="objective" class="form-control" rows="10" placeholder='rows="3"' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                                <input data-parsley-type="url" type="url" id="video" class="form-control col-md-7 col-xs-12">
+                                            </div>
+
+                                        </div>
+
+
+                                        <div style="display: none" class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description">Description (1000 chars max)</label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <textarea id="description" class="form-control" rows="10" placeholder='Small description about the event' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
                                                       data-parsley-validation-threshold="10"></textarea>
                                             </div>
 
                                         </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">Embed Youtube video
-                                            </label>
 
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name" placeholder="Action Title" class="form-control col-md-7 col-xs-12">
-                                            </div>
-
-                                        </div>
 
 
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">Action Button Title
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="btn_label">Action Button Title
                                             </label>
 
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name" placeholder="Action Title" class="form-control col-md-7 col-xs-12">
+                                                <input type="text" id="btn_label" placeholder="Title" class="form-control col-md-7 col-xs-12">
                                             </div>
 
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">Action Url
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="btn_url">Action Button Url
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-required="true" type="text" id="name" placeholder="Url" class="form-control col-md-7 col-xs-12">
+                                                <input data-parsley-type="url" type="text" id="btn_url" placeholder="Url" class="form-control col-md-7 col-xs-12">
                                             </div>
 
                                         </div>
@@ -231,4 +246,6 @@
         </div>
     </div>
 </div>
+
+<script src="whenhub_api/event.js"></script>
 <!-- /page content -->
