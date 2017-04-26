@@ -33,3 +33,6 @@
 <script src="../vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
+
+<!-- PNotify -->
+<script src="../vendors/pnotify/dist/pnotify.js"></script>
