@@ -30,12 +30,12 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Event</h3>
+                        <h3>Education</h3>
                     </div>
 
                     <div class="title_right">
                         <div class="col-md-5 col-sm-5 col-xs-12 pull-right">
-                            <a href="event_input.php?src=EDU" class="btn btn-block btn-primary"><i class="fa fa-folder"></i> Add New Event </a>
+                            <a href="education_input.php" class="btn btn-block btn-primary"><i class="fa fa-folder"></i> Add New School </a>
                         </div>
                     </div>
                 </div>
@@ -46,19 +46,19 @@
                     <div class="col-md-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h4>All events</h4>
+                                <h4>All Schools</h4>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
 
-                                <p>Simple table with project listing with progress and editing options</p>
+                                <p>You can add, edit, modify or delete schools</p>
 
                                 <!-- start project list -->
                                 <table class="table table-striped projects">
                                     <thead>
                                     <tr>
                                         <th style="width: 1%">#</th>
-                                        <th style="width: 20%">Name</th>
+                                        <th style="width: 20%">School</th>
                                         <th>Time period</th>
                                         <th style="width: 50%">Action</th>
                                     </tr>

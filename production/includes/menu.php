@@ -15,12 +15,12 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                     <li><a href="basic.php"><i class="fa fa-home"></i> Basic Info </a></li>
-                    <li><a href="event_list.php"><i class="fa fa-home"></i> Education </a></li>
-                    <li><a><i class="fa fa-home"></i> Experience </a></li>
-                    <li><a><i class="fa fa-home"></i> Projects </a></li>
-                    <li><a><i class="fa fa-home"></i> Publications </a></li>
-                    <li><a><i class="fa fa-home"></i> Honors </a></li>
-                    <li><a><i class="fa fa-home"></i> Activities </a></li>
+                    <li><a href="education.php"><i class="fa fa-home"></i> Education </a></li>
+                    <li><a href="experience.php"><i class="fa fa-home"></i> Experience </a></li>
+                    <li><a href="projects.php"><i class="fa fa-home"></i> Projects </a></li>
+                    <li><a href="publications.php"><i class="fa fa-home"></i> Publications </a></li>
+                    <li><a href="honors.php"><i class="fa fa-home"></i> Honors </a></li>
+                    <li><a href="activities.php"><i class="fa fa-home"></i> Activities </a></li>
                     <li><a href="social.php"><i class="fa fa-home"></i> Social </a></li>
 
                 </ul>

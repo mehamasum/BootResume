@@ -30,7 +30,7 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Event Details</h3>
+                        <h3>School Details</h3>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -56,7 +56,7 @@
                                             <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                                                 <div class="clearfix"></div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Event Name<span class="required">*</span>
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">School Name<span class="required">*</span>
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <input data-parsley-required="true" type="text" id="name" class="form-control col-md-7 col-xs-12">
@@ -64,7 +64,7 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">Event Sub Title
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">School Sub Title
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <input type="text" id="subtitle1" placeholder="Degree, area of work etc." class="form-control col-md-7 col-xs-12">
@@ -223,7 +223,7 @@
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description">Description (1000 chars max)</label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="description" class="form-control" rows="10" placeholder='Small description about the event' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                            <textarea id="description" class="form-control" rows="10" placeholder='Small description about the School' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
                                                       data-parsley-validation-threshold="10"></textarea>
                                                     </div>
 
