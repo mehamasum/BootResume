@@ -240,6 +240,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	
     <script>$(".tip").tooltip({placement:"bottom"})</script>
     <script>$(".tip2").tooltip({placement:"right"})</script>
-    <script src="production/whenhub_api/main.js"> </script>
+
   </body>
 </html>

@@ -16,7 +16,7 @@
                     </div>
                     <div class="x_content">
                         <br />
-                        <form data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="img-form" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left">
 
                             <div class="form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Change Avatar
@@ -25,20 +25,8 @@
                                     <div  class="text-center well" style="margin-bottom: 10px">
                                         <img class="img-circle" id="featured_img" src="images/avatar.png" alt="Featured" width="100px" height="100px" />
                                     </div>
-                                    <input type="file" id="name" onchange="readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
-                                    <script>
-                                        function readURL(input) {
-                                            if (input.files && input.files[0]) {
-                                                var reader = new FileReader();
+                                    <input type="file" id="imageToUpload" onchange="javascript:readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
 
-                                                reader.onload = function (e) {
-                                                    $('#featured_img').attr('src', e.target.result);
-                                                };
-
-                                                reader.readAsDataURL(input.files[0]);
-                                            }
-                                        }
-                                    </script>
                                 </div>
                             </div>
 
@@ -87,6 +75,9 @@
                                 </div>
                             </div>
 
+
+
+
                         </form>
                     </div>
                 </div>
@@ -94,4 +85,6 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="js/basic.js"></script>
 <!-- /page content -->

@@ -1,8 +1,9 @@
 <?php
 $a_host= 'localhost';
 $a_user= 'root';
-$a_pass= '';
+//$a_pass= '';
 $a_db= 'elegantres';
+$a_pass='rifat007';
 
 // Create connection
 $conn = mysqli_connect($a_host, $a_user, $a_pass, $a_db);

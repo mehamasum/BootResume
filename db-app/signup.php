@@ -7,7 +7,8 @@ session_start();
  * Time: 8:05 PM
  */
 
-require_once('dbconnect_u.php');
+//require_once('dbconnect_u.php');
+require_once('db_local.php');
 
 $username = $_POST['username'];
 $password = md5($_POST['password']);
@@ -18,6 +19,9 @@ $fullname = $_POST['fullname'];
 $username_check = "SELECT * FROM users WHERE username = '". $username."';";
 $email_check = "SELECT * FROM users WHERE email = '". $email."';";
 $signup_sql = "INSERT INTO users (email, username, name, password) VALUES ('" . $email . "','" . $username . "','" . $fullname . "','" . $password . "');";
+$image_sql = "INSERT INTO images ( username) VALUES ('" . $username .  "');";
+
+
 
 if(($result = $conn->query($username_check)) && $result->num_rows > 0){
     echo "Username already exists";
@@ -26,7 +30,7 @@ if(($result = $conn->query($username_check)) && $result->num_rows > 0){
 else if(($result = $conn->query($email_check)) && $result->num_rows > 0){
     echo "Email already exists";
 }
-else if($conn->query($signup_sql) == TRUE){
+else if($conn->query($signup_sql) == TRUE && $conn->query($image_sql) == TRUE){
     $_SESSION['user']=$username;
     echo "success";
 }

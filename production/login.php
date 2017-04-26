@@ -118,5 +118,6 @@
 
     <?php include ('includes/bottom_imports.php') ?>
     <script type="text/javascript" src="js/form_on_submit.js"></script>
+    <script type="text/javascript" src="whenhub_api/main.js"></script>
   </body>
 </html>

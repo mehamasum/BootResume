@@ -36,12 +36,13 @@ function create_schedule(username, fullname) {
     obj.sync=false;
 
     var jsonString= JSON.stringify(obj);
+    var id= 'none';
 
     $.ajax({
         type: "POST",
         url: user_create_url,
         data: jsonString,
-
+        async: false,
         contentType: "application/json",
         complete: function(xhr, statusText){
             //alert(xhr.status);
@@ -50,28 +51,16 @@ function create_schedule(username, fullname) {
         success: function (data) {
 
             console.log(data['id']);
-
-
+            id=data['id'];
+          //  add_id_to_db(username,id);
         },
         error: function(xhr, statusText, err){
             console.log("Error:" + xhr.status);
         }
     });
 
-
-    /*$.post(user_create_url, {
-
-
-
-    }, function (data) {
-
-        var d= JSON.parse(data);
-        console.log(data);
-        console.log(d['id']);
-
-    },'json');
-    */
-    console.log(jsonString);
+    return id;
 }
 
-create_schedule("tanvirs27","Tanvir Shahriar");
+
+//create_schedule("tanvirs27","Tanvir Shahriar");
