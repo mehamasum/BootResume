@@ -9,7 +9,8 @@ session_start();
  * Time: 6:15 PM
  */
 
-require_once('dbconnect_v.php');
+//require_once('dbconnect_v.php');
+require_once('db_local.php');
 
 $username = $_POST['username'];
 $password = md5($_POST['password']);
@@ -17,10 +18,13 @@ $password = md5($_POST['password']);
 
 $sql = "SELECT * FROM users WHERE username = '". $username."' AND password= '".$password."';";
 
+
 if($result = $conn->query($sql)){
     if($result->num_rows == 0) echo "Username or password does not match";
     else {
+        $row = $result->fetch_assoc();
         $_SESSION['user']=$username;
+        $_SESSION['schedule_id']=$row['scheduleId'];
         echo "success";
     }
 }

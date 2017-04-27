@@ -3,6 +3,28 @@
  */
 
 
+function add_id_to_db(username, id) {
+    $.post("../db-app/add-schid.php", {
+
+        username: username,
+        schid: id
+
+    }, function (data) {
+
+        if (data.includes("success")) {
+
+            console.log("schedule id inserted");
+            window.location.href = "basic.php";
+
+        }
+        else {
+            console.log("error in adding schedule id");
+        }
+        window.location.href = "basic.php";
+    });
+}
+
+
 function login_submit() {
 //    alert("Gotha");
 
@@ -59,7 +81,14 @@ function signup_submit() {
             //sessionStorage.setItem("name",username);
             // meha: session stored in php now
 
-            window.location.href = "basic.php";
+            console.log("signup complete ");
+
+            var id=create_schedule(username,fullname);
+
+            console.log("after creating schedule "+id);
+            add_id_to_db(username,id);
+
+            //window.location.href = "basic.php";
             //document.getElementById("error_message").innerHTML = data;
         }
         else {

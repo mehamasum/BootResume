@@ -16,29 +16,17 @@
                     </div>
                     <div class="x_content">
                         <br />
-                        <form data-parsley-validate class="form-horizontal form-label-left">
+                        <form id="img-form" enctype="multipart/form-data" data-parsley-validate class="form-horizontal form-label-left" action="javascript:form_submitted();">
 
                             <div class="form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Change Avatar
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div  class="text-center well" style="margin-bottom: 10px">
-                                        <img class="img-circle" id="featured_img" src="images/avatar.png" alt="Featured" width="100px" height="100px" />
+                                        <img class="img-circle" id="featured_img" src="<?php echo "../db-app/image-display.php"?>" alt="No image" width="100px" height="100px" />
                                     </div>
-                                    <input type="file" id="name" onchange="readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
-                                    <script>
-                                        function readURL(input) {
-                                            if (input.files && input.files[0]) {
-                                                var reader = new FileReader();
+                                    <input type="file" id="imageToUpload" onchange="javascript:readURL(this);" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
 
-                                                reader.onload = function (e) {
-                                                    $('#featured_img').attr('src', e.target.result);
-                                                };
-
-                                                reader.readAsDataURL(input.files[0]);
-                                            }
-                                        }
-                                    </script>
                                 </div>
                             </div>
 
@@ -46,7 +34,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input data-parsley-required="true" type="text" id="name"  class="form-control col-md-7 col-xs-12">
+                                    <input data-parsley-required="true" type="text" id="basic_name"  class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
@@ -54,7 +42,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email<span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input data-parsley-required="true" type="email" id="email"  class="form-control col-md-7 col-xs-12">
+                                    <input data-parsley-required="true" type="email" id="basic_email"  class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
@@ -63,14 +51,14 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">Contact No<span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input data-parsley-required="true" data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" id="contact"  class="form-control col-md-7 col-xs-12">
+                                    <input data-parsley-required="true" data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" id="basic_contact"  class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="objective">Objective (200 chars max)</label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <textarea id="objective" class="form-control" data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="200" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                    <textarea id="basic_objective" class="form-control" data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="200" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
                                               data-parsley-validation-threshold="10"></textarea>
                                 </div>
 
@@ -87,6 +75,9 @@
                                 </div>
                             </div>
 
+
+
+
                         </form>
                     </div>
                 </div>
@@ -94,4 +85,6 @@
         </div>
     </div>
 </div>
-<!-- /page content -->
+
+<!-- <script type="text/javascript" src="js/basic.js"></script>
+/page content -->

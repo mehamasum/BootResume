@@ -36,5 +36,7 @@
     </div>
 
     <?php include ('includes/bottom_imports.php') ?>
+    <script type="text/javascript" src="js/basic.js"></script>
+
   </body>
 </html>
