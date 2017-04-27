@@ -46,7 +46,7 @@ class Database {
         return $results;
     }
 
-    public function FindImage($id) {
+    public function FindImage() {
         $sql = $this->link->prepare("SELECT * FROM images WHERE username = :username;");
         $sql->bindParam(":username", $_SESSION['user']);
         $sql->execute();

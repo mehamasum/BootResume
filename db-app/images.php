@@ -56,9 +56,9 @@ class Images {
         $images = $database->GetAllImages();
         return $images;
     }
-    public static function GetImage($id) {
+    public static function GetImage() {
         $database = new Database();
-        $image = $database->FindImage($id);
+        $image = $database->FindImage();
         return $image;
     }
 }
