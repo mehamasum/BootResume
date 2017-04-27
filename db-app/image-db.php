@@ -7,11 +7,8 @@ class Database {
         $host= 'localhost';
         $user= 'root';
         $db= 'elegantres';
-
-        //$pass = '';
-        //$pass='rifat007';
-        $pass='3BnCPnAc'; // server
-
+        $pass='rifat007';
+        //$a_pass='3BnCPnAc'; // server
         session_start();
         try{
             $this->link = new PDO("mysql:host=".$host.";dbname=".$db, $user, $pass);
