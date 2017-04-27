@@ -9,8 +9,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="">
                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <img src="images/avatar.png" alt=""><?php echo $_SESSION['user']?>
-                        <span class=" fa fa-angle-down"></span>
+                        <i class="fa fa-user" aria-hidden="true"></i> <?php echo $_SESSION['user']?>  <span class=" fa fa-angle-down"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
                         <li><a href="javascript:;">Account</a></li>

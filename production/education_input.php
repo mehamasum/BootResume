@@ -289,9 +289,8 @@ else {
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                            <button onclick="location.href='education.php';"class="btn btn-primary" type="button">Cancel</button>
-                                            <button class="btn btn-primary" type="reset">Reset</button>
-                                            <button type="submit" class="btn btn-success">Add New School</button>
+                                            <button onclick="location.href='education.php';" class="btn btn-primary" type="button">Cancel</button>
+                                            <button type="submit" class="btn btn-success"><?php if($edit) echo "Update School"; else echo "Add New School";?></button>
                                         </div>
                                     </div>
 

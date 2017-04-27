@@ -294,14 +294,82 @@ function get_details(scheduleId, eventId, type) {
         },
         success: function (data) {
             console.log(data);
-            new PNotify({
-                title: 'Success',
-                text: 'Removed from your resume',
-                type: 'success',
-                styling: 'bootstrap3'
-            });
-
             //TODO parse and set gui
+
+            var obj = data;
+
+            var s_found = obj.when.startDate;
+            console.log(s_found);
+
+            $("#startYear").val(s_found.substring(0, 4));
+            $("#startMonth").val(s_found.substring(5, 7));
+
+            var e_found = obj.when.endDate;
+            console.log(e_found);
+            if (!(e_found===null)) {
+                $("#endYear").val(e_found.substring(0, 4));
+                $("#endMonth").val(e_found.substring(5, 7));
+            }
+
+            $("#name").val(obj.name);
+
+
+            if (!("undefined" === typeof obj.description)) {
+                $("#description").val(obj.description);
+            }
+
+
+            var tagArr = obj.tags;
+
+            if(tagArr.length>1) {
+
+                var TAGS = ["SKILL", "ROLE", "SUB", "STS", "MISC"];
+
+                var skillBox = $("#skill");
+                var roleBox = $("#role");
+                var subBox = $("#subject");
+                var stsBox = $("#status");
+                var miscBox = $("#misc");
+
+                for(var itr = 1; itr< obj.tags.length; itr++) {
+                    var foundTag = obj.tags[itr];
+                    var strippedTags = foundTag.split("###");
+
+                    console.log(strippedTags[0]);
+                    console.log(strippedTags[1]);
+
+                    var old;
+                    if(strippedTags[0]===TAGS[0]) {
+                        old = skillBox.val();
+                        if(old==="") skillBox.val(strippedTags[1]);
+                        else skillBox.val(old +", "+ strippedTags[1]);
+                    }
+                    if(strippedTags[0]===TAGS[1]) {
+                        old = roleBox.val();
+                        if(old==="") roleBox.val(strippedTags[1]);
+                        else roleBox.val(old +", "+ strippedTags[1]);
+                    }
+                    if(strippedTags[0]===TAGS[2]) {
+                        old = subBox.val();
+                        if(old==="") subBox.val(strippedTags[1]);
+                        else subBox.val(old +", "+ strippedTags[1]);
+                    }
+                    if(strippedTags[0]===TAGS[3]) {
+                        old = stsBox.val();
+                        if(old==="") stsBox.val(strippedTags[1]);
+                        else stsBox.val(old +", "+ strippedTags[1]);
+                    }
+                    if(strippedTags[0]===TAGS[4]) {
+                        old = miscBox.val();
+                        if(old==="") miscBox.val(strippedTags[1]);
+                        else miscBox.val(old +", "+ strippedTags[1]);
+                    }
+                }
+            }
+
+
+
+
         },
         error: function(xhr, statusText, err){
             console.log("Error: " + xhr.status);
@@ -315,6 +383,8 @@ function update_event(scheduleId, eventId, type) {
 
     //var scheduleId = "58fa07bbc7ddaa3b7464e0ac";
     var updateUrl = "https://api.whenhub.com/api/schedules/"+scheduleId+"/events/"+eventId+"?access_token="+accessToken;
+
+    console.log(updateUrl);
 
     /*
      {
