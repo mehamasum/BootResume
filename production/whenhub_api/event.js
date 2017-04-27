@@ -187,7 +187,7 @@ function get_events(scheduleId, type) {
 
     //var scheduleId = "58fa07bbc7ddaa3b7464e0ac";
     var event_create_url= "https://api.whenhub.com/api/schedules/"+scheduleId+"/events?access_token="+accessToken;
-
+    console.log(event_create_url);
 
     /*
      {
@@ -282,6 +282,7 @@ function get_details(scheduleId, eventId, type) {
 
     //var scheduleId = "58fa07bbc7ddaa3b7464e0ac";
     var getUrl = "https://api.whenhub.com/api/schedules/"+scheduleId+"/events/"+eventId+"?access_token="+accessToken;
+    console.log(getUrl);
 
     $.ajax({
         type: "GET",
@@ -294,7 +295,6 @@ function get_details(scheduleId, eventId, type) {
         },
         success: function (data) {
             console.log(data);
-            //TODO parse and set gui
 
             var obj = data;
 
@@ -368,11 +368,26 @@ function get_details(scheduleId, eventId, type) {
             }
 
 
+            if(type==="EDU") {
+                $("#subtitle1").val(obj.customFieldData.degree);
+                $("#subtitle2").val(obj.customFieldData.area);
+            }
+
+            if (!("undefined" === typeof obj.primaryAction)) {
+                $("#btn_label").val(obj.primaryAction.label);
+                $("#btn_url").val(obj.primaryAction.url);
+            }
 
 
         },
         error: function(xhr, statusText, err){
             console.log("Error: " + xhr.status);
+            new PNotify({
+                title: 'Error fetching data',
+                text: statusText,
+                type: 'error',
+                styling: 'bootstrap3'
+            });
         }
     });
 
