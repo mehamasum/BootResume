@@ -3,7 +3,7 @@
 $edit = false;
 
 //TODO: risky call, assuming it is already set :/
-$schedule_id = "58fa07bbc7ddaa3b7464e0ac"; //$_SESSION['schedule_id'];
+$schedule_id = $_SESSION['schedule_id'];  // "58fa07bbc7ddaa3b7464e0ac";
 
 if(isset($_GET['eventId'])) {
     $edit = true;
