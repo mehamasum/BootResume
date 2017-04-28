@@ -40,10 +40,10 @@ function readURL(input) {
         var reader = new FileReader();
 
         var data = new FormData();
-        data.append('imageToUpload', input.files[0]);
+        data.append('file', input.files[0]);
 
-        /*$.ajax({
-            url: "../db-app/upload-img.php",
+        $.ajax({
+            url: "https://api.whenhub.com/api/schedules/58fa07bbc7ddaa3b7464e0ac/media?access_token=i7LM4k7JcSKs4ucCpxpgNPcs3i1kRbNKyUE8aPGKZzZWASagz9uZiuLgmgDgBJzY",
             type: "POST",
             data: data,
             processData: false,
@@ -51,13 +51,14 @@ function readURL(input) {
             success: function (res) {
                // document.getElementById("response").innerHTML = res;
                 console.log(res);
+                console.log(res['id']);
             }
-        });*/
+        });
 
         reader.onload = function (e) {
             var img = $('#featured_img');
             img.attr('src', e.target.result);
-            img.css('opacity', '50');
+            img.css('opacity', 0.5);
 
         };
 
