@@ -47,7 +47,7 @@ function readURL(input) {
             type: "POST",
             data: data,
             processData: false,
-            contentType: 'application/x-www-form-url-encoded',
+            contentType: 'application/x-www-form-urlencoded',
             success: function (res) {
                // document.getElementById("response").innerHTML = res;
                 console.log(res);
