@@ -15,10 +15,11 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $name = $_POST['name'];
 $objective= $_POST['objective'];
+$con = $_POST['country'];
 
 
-$sql = "UPDATE users SET email= '".$email."', phone='".$phone."', name='".$name."', objective='".$objective."' WHERE username='".$username."';";
-
+$sql = "UPDATE users SET email= '".$email."', phone='".$phone."', name='".$name."', objective='".$objective."', country='".$con."' WHERE username='".$username."';";
+echo $sql;
 
 
 if($conn->query($sql) == TRUE){

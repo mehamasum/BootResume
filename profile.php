@@ -25,7 +25,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>YOUR_NAME - TWITTER_HANDLE</title>
+    <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="TAG_LINE_ABOUT_YOU">
     <meta name="author" content="YOUR_NAME">
@@ -268,7 +268,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 <div class="container">
     <div class="row">
 			<span class="span8 offset2 text-center">
-				<p><small>© 2013 <a href="https://github.com/nealrs/BootResume">BootRésumé</a></small></p>
+				<p><small>© 2017 <a href="production/login.php">Elegant Resume</a></small></p>
 			</span>
     </div>
 </div>
