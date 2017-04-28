@@ -19,6 +19,11 @@ $(window).load(function() {
         document.getElementById("basic_objective").value = ara[0][7];
         document.getElementById("basic_country").value = ara[0][8];
 
+        if(ara[0][9].length>0)
+            $("#avatar").attr('src', "../db-app/"+ara[0][9]);
+        else
+            $("#avatar").attr('src', 'images/avatar.png');
+
     });
 
 /*
@@ -35,34 +40,56 @@ $(window).load(function() {
     */
 });
 
-function readURL(input) {
+function readURL(input, user) {
     if (input.files && input.files[0]) {
-        var reader = new FileReader();
+
+        $("#avatar").attr('src', 'images/loading_spinner.gif');
 
         var data = new FormData();
-        data.append('file', input.files[0]);
+        data.append('imageToUpload', input.files[0]);
+        data.append('user', user);
+
+        console.log("before ajax "+data);
 
         $.ajax({
-            url: "https://api.whenhub.com/api/schedules/58fa07bbc7ddaa3b7464e0ac/media?access_token=i7LM4k7JcSKs4ucCpxpgNPcs3i1kRbNKyUE8aPGKZzZWASagz9uZiuLgmgDgBJzY",
+            url: "../db-app/upload-img.php",
             type: "POST",
             data: data,
             processData: false,
-            contentType: 'application/x-www-form-urlencoded',
+            contentType: false,
             success: function (res) {
                // document.getElementById("response").innerHTML = res;
                 console.log(res);
-                console.log(res['id']);
+
+                if(res.indexOf("ERR")==-1) {
+                    new PNotify({
+                        title: 'Success',
+                        text: "Avatar updated!",
+                        type: 'success',
+                        styling: 'bootstrap3'
+                    });
+
+                    var splits = res.split("###");
+                    console.log(splits);
+                    res = splits[1];
+
+                    if(res.length>0)
+                        $("#avatar").attr('src', "../db-app/"+res);
+                    else
+                        $("#avatar").attr('src', 'images/avatar.png');
+
+                }
+                else {
+                    new PNotify({
+                        title: 'Error :(',
+                        text: "Something went wrong",
+                        type: 'error',
+                        styling: 'bootstrap3'
+                    });
+                }
             }
         });
 
-        reader.onload = function (e) {
-            var img = $('#featured_img');
-            img.attr('src', e.target.result);
-            img.css('opacity', 0.5);
-
-        };
-
-        reader.readAsDataURL(input.files[0]);
     }
 }
 
