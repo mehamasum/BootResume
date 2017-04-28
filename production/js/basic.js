@@ -55,7 +55,7 @@ function readURL(input) {
         });*/
 
         reader.onload = function (e) {
-            var img = $('#featured_img').;
+            var img = $('#featured_img');
             img.attr('src', e.target.result);
             img.css('opacity', '50');
 
