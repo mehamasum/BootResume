@@ -20,7 +20,7 @@ $(window).load(function() {
         document.getElementById("basic_country").value = ara[0][8];
 
         if(ara[0][9].length>0)
-            $("#avatar").attr('src', "../db-app/"+ara[0][9]);
+            $("#avatar").attr('src', "../"+ara[0][9]);
         else
             $("#avatar").attr('src', 'images/avatar.png');
 
@@ -74,7 +74,7 @@ function readURL(input, user) {
                     res = splits[1];
 
                     if(res.length>0)
-                        $("#avatar").attr('src', "../db-app/"+res);
+                        $("#avatar").attr('src', "../"+res);
                     else
                         $("#avatar").attr('src', 'images/avatar.png');
 

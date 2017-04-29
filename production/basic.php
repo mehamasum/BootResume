@@ -58,6 +58,9 @@
                         </div>
                       </div>
 
+
+                      <div class="ln_solid" style="margin-top: 20px"></div>
+
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="basic_name">Name<span class="required">*</span>
                         </label>
@@ -101,13 +104,10 @@
                       </div>
 
 
-
-                      <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancel</button>
-                          <button class="btn btn-primary" type="reset">Reset</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
+                          <button type="submit" class="btn btn-success">Update Profile</button>
                         </div>
                       </div>
 
