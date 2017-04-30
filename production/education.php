@@ -55,7 +55,7 @@ $schedule_id = $_SESSION['schedule_id'];  // "58fa07bbc7ddaa3b7464e0ac";
                             </div>
                             <div class="x_content">
 
-                                <p>You can add, edit, modify or delete schools</p>
+                                <p>You can add, modify or delete schools</p>
 
                                 <!-- start project list -->
                                 <table class="table table-striped projects">
