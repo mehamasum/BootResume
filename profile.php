@@ -73,9 +73,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         </div>-->
 
         <div class="text-center">
-            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>
-            <h3 class="media-heading" style="margin-top: 10px">Joe Sixpack <small>USA</small></h3>
-            <span class="">mehamasum@gmail.com | +8801521112085</span>
+            <img src="avatar.jpg" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>
+            <h3 class="media-heading" style="margin-top: 10px">Alen Sharp <small>USA</small></h3>
+            <span class="">alen@company.com | +12024558888</span>
         </div>
 
     </div>
@@ -86,9 +86,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
             <!--<h3><img src="avatar.png" height="60px" width="60px" class="img-circle"> Your Name</h3>-->
             <div>
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>
-                <h3 class="media-heading" style="margin-top: 10px">Joe Sixpack <small>USA</small></h3>
-                <span class="">mehamasum@gmail.com | +8801521112085</span>
+                <img src="avatar.png" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>
+                <h3 class="media-heading" style="margin-top: 10px">Alen Sharp <small>USA</small></h3>
+                <span class="">alen@company.com | +12024558888</span>
             </div>
             <h3>
                 <a style="text-decoration: none" href="#" title="Twitter"><i class="fa fa-twitter "></i></a>
@@ -116,11 +116,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12" style=" background:white; padding:20px;">
 
 
-        <h3><i class="fa fa-tasks"></i> Objective</h3>
-        <ul style="padding-bottom:5px;">
-            To obtain a professional position in the consulting industry utilizing my relevant experience, technical expertise,
-            and problem solving skills.
-        </ul>
+        <div style="display: none">
+            <h3><i class="fa fa-tasks"></i> Objective</h3>
+            <ul style="padding-bottom:5px;">
+                To obtain a professional position in the consulting industry utilizing my relevant experience, technical expertise,
+                and problem solving skills.
+            </ul>
+        </div>
 
         <h3><i class="fa fa-book"></i> Education</h3>
         <ul style="padding-bottom:5px;">
