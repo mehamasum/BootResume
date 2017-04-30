@@ -1,4 +1,5 @@
-<?php include ('includes/sess.php') ?>
+<?php include ('includes/sess.php')
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,10 +44,14 @@
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form data-parsley-validate class="form-horizontal form-label-left">
+
+
+
+
+                                <form action="javascript:submit(<?php echo $_SESSION['user']?>);" data-parsley-validate class="form-horizontal form-label-left">
 
                                     <?php
-                                    $media = ["LinkedIn", "Twitter", "Github", "Facebook", "Google+", "Skype", "Flickr", "Instagram", "Tumblr", "Youtube"];
+                                    $media = ["LinkedIn", "Twitter", "Github", "Facebook", "Google", "Skype", "Flickr", "Instagram", "Tumblr", "Youtube"];
 
                                     foreach($media as $m) {
                                         ?>
@@ -89,5 +94,63 @@
 </div>
 
 <?php include ('includes/bottom_imports.php') ?>
+
+
+<script>
+    function submit(username) {
+
+        NProgress.start();
+
+        var sm = ["LinkedIn", "Twitter", "Github", "Facebook", "Google", "Skype", "Flickr", "Instagram", "Tumblr", "Youtube"];
+        var sm_val = [];
+
+        var it;
+        for( it=0; it<sm.length; it++) {
+            sm_val.push($("#"+sm[it]).val());
+        }
+
+        for(it=0; it<sm.length; it++) {
+            console.log(sm_val[it]);
+        }
+
+        $.post("../db-app/social.php", {
+
+            li: sm_val[0],
+            tw: sm_val[1],
+            gi: sm_val[2],
+            fa: sm_val[3],
+            go: sm_val[4],
+            sk: sm_val[5],
+            fl: sm_val[6],
+            insta: sm_val[7],
+            tu: sm_val[8],
+            yo: sm_val[9],
+            user: username
+
+        }, function (data) {
+            NProgress.done();
+            NProgress.remove();
+
+            if (data.includes("success")) {
+                new PNotify({
+                    title: 'Success',
+                    text: 'Profile updated',
+                    type: 'success',
+                    styling: 'bootstrap3'
+                });
+            }
+            else {
+                new PNotify({
+                    title: 'Error updating data',
+                    text: data,
+                    type: 'error',
+                    styling: 'bootstrap3'
+                });
+
+            }
+
+        });
+    }
+</script>
 </body>
 </html>

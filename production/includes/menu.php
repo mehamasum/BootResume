@@ -25,7 +25,7 @@
 
                 </ul>
             </div>
-            <div class="menu_section">
+            <div class="menu_section" style="display: none">
                 <h3>Settings</h3>
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-home"></i> Colors </a></li>

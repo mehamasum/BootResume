@@ -7,10 +7,10 @@ $schedule_id = $_SESSION['schedule_id'];  // "58fa07bbc7ddaa3b7464e0ac";
 
 if(isset($_GET['eventId'])) {
     $edit = true;
-    $actionUrl = "javascript:update_event('". $schedule_id. "', '". $_GET['eventId']. "', 'EDU');";
+    $actionUrl = "javascript:update_event('". $schedule_id. "', '". $_GET['eventId']. "', 'EXP');";
 }
 else {
-    $actionUrl = "javascript:create_event('". $schedule_id. "', 'EDU');";
+    $actionUrl = "javascript:create_event('". $schedule_id. "', 'EXP');";
 }
 
 ?>
@@ -29,7 +29,6 @@ else {
     <?php include ('includes/top_imports.php') ?>
 
 
-
 </head>
 
 <body class="nav-md">
@@ -45,7 +44,7 @@ else {
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>School Details</h3>
+                        <h3>Company Details</h3>
                     </div>
 
                     <div class="title_right">
@@ -80,7 +79,7 @@ else {
                                             <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                                                 <div class="clearfix"></div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">School Name<span class="required">*</span>
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Company Name<span class="required">*</span>
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <input data-parsley-required="true" type="text" id="name" class="form-control col-md-7 col-xs-12">
@@ -88,18 +87,10 @@ else {
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">Degree<span class="required">*</span>
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">Role/Designation<span class="required">*</span>
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <input data-parsley-required="true" type="text" id="subtitle1" class="form-control col-md-7 col-xs-12">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle2">Area of Study<span class="required">*</span>
-                                                    </label>
-                                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input data-parsley-required="true" type="text" id="subtitle2" class="form-control col-md-7 col-xs-12">
                                                     </div>
                                                 </div>
 
@@ -220,7 +211,7 @@ else {
                                                     </label>
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input type="text" id="btn_label" placeholder="i.e: Visit School Website..." class="form-control col-md-7 col-xs-12">
+                                                        <input type="text" id="btn_label" placeholder="i.e: Visit Company Website..." class="form-control col-md-7 col-xs-12">
                                                     </div>
 
                                                 </div>
@@ -242,8 +233,8 @@ else {
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                            <button onclick="location.href='education.php';" class="btn btn-primary" type="button">Cancel</button>
-                                            <button type="submit" class="btn btn-success"><?php if($edit) echo "Update School"; else echo "Add New School";?></button>
+                                            <button onclick="location.href='experience.php';" class="btn btn-primary" type="button">Cancel</button>
+                                            <button type="submit" class="btn btn-success"><?php if($edit) echo "Update Company"; else echo "Add New Company";?></button>
                                         </div>
                                     </div>
 
@@ -264,16 +255,15 @@ else {
 <script src="whenhub_api/event.js"></script>
 <?php include ('includes/bottom_imports.php');
 include ('includes/hashtags.php');
-
     if($edit) { ?>
         <script>
             window.onload = function() {
                 console.log("ready");
                 $(".resume_tag").hashtags();
-                get_details('<?php echo $schedule_id?>', "<?php echo $_GET['eventId']?>", "EDU");
+                get_details('<?php echo $schedule_id?>', "<?php echo $_GET['eventId']?>", "EXP");
             };
         </script>
-<?php
+    <?php
     } else { ?>
         <script>
             window.onload = function() {
@@ -281,11 +271,9 @@ include ('includes/hashtags.php');
                 $(".resume_tag").hashtags();
             };
         </script>
-<?php
+        <?php
     }
 ?>
-
-
 
 </body>
 </html>

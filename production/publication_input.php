@@ -7,10 +7,10 @@ $schedule_id = $_SESSION['schedule_id'];  // "58fa07bbc7ddaa3b7464e0ac";
 
 if(isset($_GET['eventId'])) {
     $edit = true;
-    $actionUrl = "javascript:update_event('". $schedule_id. "', '". $_GET['eventId']. "', 'EDU');";
+    $actionUrl = "javascript:update_event('". $schedule_id. "', '". $_GET['eventId']. "', 'PUB');";
 }
 else {
-    $actionUrl = "javascript:create_event('". $schedule_id. "', 'EDU');";
+    $actionUrl = "javascript:create_event('". $schedule_id. "', 'PUB');";
 }
 
 ?>
@@ -29,7 +29,6 @@ else {
     <?php include ('includes/top_imports.php') ?>
 
 
-
 </head>
 
 <body class="nav-md">
@@ -45,7 +44,7 @@ else {
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>School Details</h3>
+                        <h3>Publication Details</h3>
                     </div>
 
                     <div class="title_right">
@@ -70,17 +69,17 @@ else {
 
                                     <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                         <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                                            <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Info</a>
+                                            <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-PUBanded="true">Info</a>
                                             </li>
 
-                                            <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">Description</a>
+                                            <li role="presentation" class=""><a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-PUBanded="false">Description</a>
                                             </li>
                                         </ul>
                                         <div id="myTabContent" class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                                                 <div class="clearfix"></div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">School Name<span class="required">*</span>
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Title<span class="required">*</span>
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <input data-parsley-required="true" type="text" id="name" class="form-control col-md-7 col-xs-12">
@@ -88,24 +87,16 @@ else {
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">Degree<span class="required">*</span>
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle1">Co-authors
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input data-parsley-required="true" type="text" id="subtitle1" class="form-control col-md-7 col-xs-12">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="subtitle2">Area of Study<span class="required">*</span>
-                                                    </label>
-                                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input data-parsley-required="true" type="text" id="subtitle2" class="form-control col-md-7 col-xs-12">
+                                                        <input type="text" id="subtitle1" class="form-control col-md-7 col-xs-12">
                                                     </div>
                                                 </div>
 
 
                                                 <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Start Date<span class="required">*</span>
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Date<span class="required">*</span>
                                                     </label>
                                                     <div class="col-md-3 col-sm-3 col-xs-6">
                                                         <select id="startMonth" class="form-control">
@@ -132,7 +123,7 @@ else {
                                                 </div>
 
 
-                                                <div class="form-group">
+                                                <div class="form-group" style="display: none;">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="contact">End Date
                                                         <small>(Leave empty if none)</small>
                                                     </label>
@@ -207,7 +198,7 @@ else {
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description">Description (1000 chars max)</label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <textarea id="description" class="form-control" rows="10" placeholder='Small description about your experience here...' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
+                                                        <textarea id="description" class="form-control" rows="10" placeholder='Small description...' data-parsley-trigger="keyup" data-parsley-minlength="0" data-parsley-maxlength="1000" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
                                                       data-parsley-validation-threshold="10"></textarea>
                                                     </div>
                                                 </div>
@@ -220,7 +211,7 @@ else {
                                                     </label>
 
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input type="text" id="btn_label" placeholder="i.e: Visit School Website..." class="form-control col-md-7 col-xs-12">
+                                                        <input type="text" id="btn_label" placeholder="i.e: See on IEEE PUBlore..." class="form-control col-md-7 col-xs-12">
                                                     </div>
 
                                                 </div>
@@ -242,8 +233,8 @@ else {
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                            <button onclick="location.href='education.php';" class="btn btn-primary" type="button">Cancel</button>
-                                            <button type="submit" class="btn btn-success"><?php if($edit) echo "Update School"; else echo "Add New School";?></button>
+                                            <button onclick="location.href='publications.php';" class="btn btn-primary" type="button">Cancel</button>
+                                            <button type="submit" class="btn btn-success"><?php if($edit) echo "Update Publication"; else echo "Add New Publication";?></button>
                                         </div>
                                     </div>
 
@@ -264,16 +255,15 @@ else {
 <script src="whenhub_api/event.js"></script>
 <?php include ('includes/bottom_imports.php');
 include ('includes/hashtags.php');
-
     if($edit) { ?>
         <script>
             window.onload = function() {
                 console.log("ready");
                 $(".resume_tag").hashtags();
-                get_details('<?php echo $schedule_id?>', "<?php echo $_GET['eventId']?>", "EDU");
+                get_details('<?php echo $schedule_id?>', "<?php echo $_GET['eventId']?>", "PUB");
             };
         </script>
-<?php
+    <?php
     } else { ?>
         <script>
             window.onload = function() {
@@ -281,11 +271,9 @@ include ('includes/hashtags.php');
                 $(".resume_tag").hashtags();
             };
         </script>
-<?php
+        <?php
     }
 ?>
-
-
 
 </body>
 </html>
