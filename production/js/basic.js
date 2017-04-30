@@ -26,18 +26,6 @@ $(window).load(function() {
 
     });
 
-/*
-    $.post("../db-app/image-display.php", {
-
-        data: "null"
-
-    }, function (data) {
-      //  console.log(data);
-
-        $('#featured_img').attr('src', data);
-
-    });
-    */
 });
 
 function readURL(input, user) {
