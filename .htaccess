@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^profile/(.+)$ profile.php?username=$1 [R,L]
+RewriteRule ^resume/(.+)$ /ElegantResume/profile.php?username=$1 [R,L]
