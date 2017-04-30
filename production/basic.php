@@ -51,7 +51,7 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div  class="text-center well" style="margin-bottom: 10px">
-                            <img class="img-circle" id="avatar" alt="No image" width="100px" height="100px" />
+                            <img src="images/loading_spinner.gif" class="img-circle" id="avatar" alt="No image" width="100px" height="100px" />
                           </div>
                           <input type="file" id="imageToUpload" onchange="javascript:readURL(this, '<?php echo $_SESSION['user']?>');" class="form-control col-md-7 col-xs-12" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
 
