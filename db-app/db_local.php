@@ -1,9 +1,9 @@
 <?php
 $a_host= 'localhost';
 $a_user= 'root';
-$a_pass= '';
+//$a_pass= '';
 $a_db= 'elegantres';
-//$a_pass='rifat007';
+$a_pass='rifat007';
 //$a_pass='3BnCPnAc'; // server
 
 // Create connection

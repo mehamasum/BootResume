@@ -1,2 +1,2 @@
-# Redirect old file path to new file path
-Redirect /user/rifat.html /profile.php
+RewriteEngine On
+RewriteRule ^profile/(.+)$ profile.php?username=$1 [R,L]
