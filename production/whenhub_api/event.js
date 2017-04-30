@@ -114,17 +114,17 @@ function parseInput(type) {
     }
 
     else if(type==="EXP" || type==="PRO" || type==="ACT") {
-        var role = $("#subtitle1").val();
+        var role_found = $("#subtitle1").val();
 
         obj.customFieldData = {};
-        obj.customFieldData.role = role;
+        obj.customFieldData.role = role_found;
     }
 
     else if(type==="PUB") {
         var coauth = $("#subtitle1").val();
         if(coauth.length>0) {
             obj.customFieldData = {};
-            obj.customFieldData.coauthor = role;
+            obj.customFieldData.coauthor = coauth;
         }
     }
 
@@ -385,7 +385,7 @@ function get_events(scheduleId, type) {
                          "<tr>"+
                          "<td>"+cnt+"</td>"+
                          "<td><a>"+obj['name']+"</a><br /></td>"+
-                         "<td><a>"+time+"</a></td>"+
+                         "<td><a>"+timePeriodStr+"</a></td>"+
                          "<td>"+
                          "<a href='"+editFunc+"' class='btn btn-info btn-xs'><i class='fa fa-pencil'></i> Edit </a>"+
                          "<button onclick=\""+ delFunc +"\" class='btn btn-danger btn-xs'><i class='fa fa-trash-o'></i> Delete </button>"+
