@@ -48,7 +48,7 @@
 
 
 
-                                <form action="javascript:submit(<?php echo $_SESSION['user']?>);" data-parsley-validate class="form-horizontal form-label-left">
+                                <form action="javascript:submit();" data-parsley-validate class="form-horizontal form-label-left">
 
                                     <?php
                                     $media = ["LinkedIn", "Twitter", "Github", "Facebook", "Google", "Skype", "Flickr", "Instagram", "Tumblr", "Youtube"];
@@ -97,7 +97,38 @@
 
 
 <script>
-    function submit(username) {
+
+
+    $(window).load(function() {
+
+        $.post("../db-app/social-get.php", {
+
+            data: "null"
+
+        }, function (data) {
+            console.log(data);
+            var ara= JSON.parse(data);
+            console.log(ara[0]);
+
+
+            var sm = ["LinkedIn", "Twitter", "Github", "Facebook", "Google", "Skype", "Flickr", "Instagram", "Tumblr", "Youtube"];
+
+            var it;
+            for( it=0; it<sm.length; it++) {
+                $("#"+sm[it]).val();
+                document.getElementById(sm[it]).value = ara[0][it+1];
+            }
+
+        });
+
+    });
+
+
+
+
+
+
+    function submit() {
 
         NProgress.start();
 
@@ -124,8 +155,7 @@
             fl: sm_val[6],
             insta: sm_val[7],
             tu: sm_val[8],
-            yo: sm_val[9],
-            user: username
+            yo: sm_val[9]
 
         }, function (data) {
             NProgress.done();
