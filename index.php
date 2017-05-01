@@ -82,7 +82,19 @@
                 <h2 style="color: white">Why Elegant Resume?</h2>
                 <br/><br/>
                 <div class="row">
-                    <div class="col-md-4 col-sm-8">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-money fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Free</strong>
+                            </h4>
+                            <p>Elegant Resume is free of any cost.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -94,7 +106,7 @@
                             <p>Easy to use dashboard to build your resume.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-8">
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -106,7 +118,7 @@
                             <p>Simple looking interactive tags on your resume.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-8">
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>

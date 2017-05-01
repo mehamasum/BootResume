@@ -19,7 +19,7 @@ $(window).load(function() {
         document.getElementById("basic_objective").value = ara[0][7];
         document.getElementById("basic_country").value = ara[0][8];
 
-        if(ara[0][9].length>0)
+        if(ara[0][9] !== null)
             $("#avatar").attr('src', "../"+ara[0][9]);
         else
             $("#avatar").attr('src', 'images/avatar.png');
