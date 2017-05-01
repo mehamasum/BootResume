@@ -351,7 +351,7 @@ function get_events(scheduleId, type) {
 
                         cnt++;
 
-                        var endFound = obj["when"]["endDate"];
+
 
                         var edit_url;
                         if(type==="EDU")
@@ -371,6 +371,8 @@ function get_events(scheduleId, type) {
                         var editFunc = edit_url+ "?eventId="+obj["id"];
                         var delFunc = "delete_event('"+ scheduleId +"', '"+obj["id"]+"', '"+type+"')";
                         console.log(delFunc);
+
+                        var endFound = obj["when"]["endDate"];
 
                         if (endFound===null)
                             endFound = "Present";
