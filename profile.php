@@ -25,7 +25,7 @@
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -54,7 +54,7 @@
 
 </head>
 
-<body style="background:#E8E8E8; padding-top:20px; padding-bottom:20px; /*font-family: 'Titillium Web', sans-serif;*/">
+<body style="background:#E8E8E8; padding-top:20px; padding-bottom:20px; font-family: 'Lato', sans-serif;">
 <!--- head block --->
 <div class="container head_cont">
 
