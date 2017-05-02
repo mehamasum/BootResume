@@ -31,6 +31,8 @@ $(window).load(function() {
                 type: 'error',
                 styling: 'bootstrap3'
             });
+
+            NProgress.done();
         }
         else{
             console.log(data);
