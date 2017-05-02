@@ -55,7 +55,7 @@
         <div class="label label-small label-warning col-md-offset-5">Beta</div>
         <h3 class="text-white">Build your personal resume web app!</h3>
         <br>
-        <a href="production/login.php" class="btn btn-primary btn-lg">Get Started</a>
+        <a href="dashboard/login.php" class="btn btn-primary btn-lg">Get Started</a>
     </div>
 </header>
 

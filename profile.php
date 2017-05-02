@@ -39,6 +39,18 @@
     <link rel="apple-touch-fa fa-precomposed" href="../assets/ico/apple-touch-fa fa-57-precomposed.png">
     <link rel="shortcut icon" href="../assets/ico/favicon.png">
 
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <script>
+        // NProgress
+        if (typeof NProgress != 'undefined') {
+            $(document).ready(function () {
+                NProgress.start();
+            });
+        }
+    </script>
+
 
 </head>
 
@@ -143,14 +155,14 @@
 <div class="container">
     <div class="row">
 			<span class="span8 offset2 text-center">
-				<p><small>© 2017 <a href="production/login.php">Elegant Resume</a></small></p>
+				<p><small>© 2017 <a href="dashboard/login.php">Elegant Resume</a></small></p>
 			</span>
     </div>
 </div>
 
 <script>$(".tip").tooltip({placement:"bottom"})</script>
 <script>$(".tip2").tooltip({placement:"right"})</script>
-<script type="text/javascript" src="production/whenhub_api/profile.js"></script>
+<script type="text/javascript" src="dashboard/whenhub_api/profile.js"></script>
 
 </body>
 
