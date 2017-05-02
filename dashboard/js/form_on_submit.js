@@ -26,6 +26,8 @@ function add_id_to_db(username, id) {
 
 
 function login_submit() {
+
+    NProgress.start();
 //    alert("Gotha");
 
     var name = $("#login_username").val();
@@ -38,6 +40,8 @@ function login_submit() {
         password: pass
 
     }, function (data) {
+
+        NProgress.done();
 
         if (data.includes("success")) {
             //REDIRECT
@@ -58,6 +62,8 @@ function login_submit() {
 
 
 function signup_submit() {
+
+    NProgress.start();
 //    alert("Gotha");
 
     var username = $("#signup_username").val();
@@ -75,6 +81,8 @@ function signup_submit() {
         email: email
 
     }, function (data) {
+
+        NProgress.done();
 
         if (data.includes("success")) {
             //REDIRECT

@@ -25,10 +25,10 @@
 
                 </ul>
             </div>
-            <div class="menu_section" style="display: none">
+            <div class="menu_section">
                 <h3>Settings</h3>
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-home"></i> Colors </a></li>
+                    <li><a href="settings.php"><i class="fa fa-home"></i> Settings </a></li>
                 </ul>
             </div>
 
