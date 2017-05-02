@@ -1,25 +1,10 @@
-<!--
-The MIT License (MIT)
+<?php
+    session_start();
 
-Copyright (c) 2013 Neal Shyam
+    $_SESSION['profile']=$_GET['username'];
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
+?>
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,10 +57,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             <h2 style="margin: 0px;">Your Name</h2><span>mehamasum@gmail.com | +8801521112085</span>
         </div>-->
 
-        <div class="text-center">
-            <img src="avatar.jpg" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>
-            <h3 class="media-heading" style="margin-top: 10px">Alen Sharp <small>USA</small></h3>
-            <span class="">alen@company.com | +12024558888</span>
+        <div id="basic-normal" class="text-center">
+
         </div>
 
     </div>
@@ -85,26 +68,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <div>
 
             <!--<h3><img src="avatar.png" height="60px" width="60px" class="img-circle"> Your Name</h3>-->
-            <div>
-                <img src="avatar.png" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>
-                <h3 class="media-heading" style="margin-top: 10px">Alen Sharp <small>USA</small></h3>
-                <span class="">alen@company.com | +12024558888</span>
+            <div id="basic-mob">
+
             </div>
             <h3>
-                <a style="text-decoration: none" href="#" title="Twitter"><i class="fa fa-twitter "></i></a>
-                <a style="text-decoration: none" href="#" title="LinkedIn"><i class="fa fa-linkedin  "></i></a>
-                <a style="text-decoration: none" href="#" title="GitHub"><i class="fa fa-github "></i></a>
-                <a style="text-decoration: none" href="#" title="Flickr"><i class="fa fa-flickr "></i></a>
-                <a style="text-decoration: none" href="#" title="Foursquare"><i class="fa fa-foursquare "></i></a>
-                <a style="text-decoration: none" href="#" title="Facebook"><i class="fa fa-facebook "></i></a>
-                <a style="text-decoration: none" href="#" title="Google+"><i class="fa fa-google-plus "></i></a>
-                <a style="text-decoration: none" href="#" title="Instagram"><i class="fa fa-instagram "></i></a>
-                <a style="text-decoration: none" href="#" title="Skype"><i class="fa fa-skype "></i></a>
-                <a style="text-decoration: none" href="#" title="Tumblr"><i class="fa fa-tumblr "></i></a>
-                <a style="text-decoration: none" href="#" title="YouTube"><i class="fa fa-youtube "></i></a>
-                <a style="text-decoration: none" href="#" title="Dribbble"><i class="fa fa-dribbble "></i></a>
-                <a style="text-decoration: none" href="mailto:#" title="Email me"><i class="fa fa-envelope "></i></a>
+                <div id="social-mob">
 
+                </div>>
             </h3>
         </div>
     </div>
@@ -116,7 +86,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12" style=" background:white; padding:20px;">
 
 
-        <div style="display: none">
+        <div id="objective" style="display: block">
             <h3><i class="fa fa-tasks"></i> Objective</h3>
             <ul style="padding-bottom:5px;">
                 To obtain a professional position in the consulting industry utilizing my relevant experience, technical expertise,
@@ -125,147 +95,50 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         </div>
 
         <h3><i class="fa fa-book"></i> Education</h3>
-        <ul style="padding-bottom:5px;">
-            <li>
-                <a href="#"><strong>ABC College of Engineering</strong></a>, PhD Robotics, 2011<br>
-                <span class="label label-default">Activity A</span>
-                <span class="label label-default">Activity B</span>
-                <span class="label label-default">Activity C</span>
+        <div id="education">
 
-            </li><br>
-            <li>
-                <a href="#"><strong>Central District University</strong></a>, B.S. Astro Physics Engineering, 2005<br>
-                <span class="label label-default">Club A</span>
-                <span class="label label-default">Club B</span>
-                <span class="label label-default">Club C</span>
 
-            </li>
-        </ul>
+        </div>
 
         <h3><i class="fa fa-briefcase"></i> Work</h3>
-        <ul style="padding-bottom:5px;">
-            <li>
-                <a href="#"><strong>COMPANY_A</strong></a>, 2011 - Present<br>
-                <span class="label label-warning">sr. account manager</span>
-                <span class="label label-default">skill 1</span>
-                <span class="label label-success">accomplishment</span>
-                <span class="label label-default">skill 2</span>
-                <span class="label label-default">skill 3</span>
+        <div id="experience">
 
-            </li><br>
-            <li>
-                <a href="#"><strong>COMPANY_B</strong></a>, 2011<br>
-                <span class="label label-warning">account manager</span>
-                <span class="label label-default">skill 1</span>
-                <span class="label label-info">highlight</span>
-                <span class="label label-default">skill 2</span>
-                <span class="label label-default">skill 3</span>
 
-            </li><br>
-            <li>
-                <a href="#"><strong>COMPANY_C</strong></a>, 2010 - 2011<br>
-                <span class="label label-warning">customer rep</span>
-                <span class="label label-default">skill 1</span>
-                <span class="label label-default">skill 2</span>
-                <span class="label label-primary">certification</span>
-                <span class="label label-default">skill 3</span>
-
-            </li>
-        </ul>
+        </div>
 
         <h3><i class="fa fa-flask"></i> Projects</h3>
-        <ul style="padding-bottom:5px;">
-            <li>
-                <a href="#"><strong>PROJECT_A</strong></a>, short description<br>
-                <span class="label label-warning">cofounder</span>
-                <span class="label label-default">tag 1</span>
-                <span class="label label-default">tag 2</span>
+        <div id="project">
 
-            </li><br>
-            <li>
-                <a href="#"><strong>PROJECT_B</strong></a>, short description<br>
-                <span class="label label-default">tag 1</span>
-                <span class="label label-default">tag 2</span>
-                <span class="label label-default">tag 3</span>
 
-            </li><br>
-            <li>
-                <a href="#"><strong>PROJECT_C</strong></a>, short description<br>
-                <span class="label label-info">open source</span>
-                <span class="label label-default">tag 1</span>
-                <span class="label label-default">tag 2</span>
+        </div>
 
-            </li>
-
-        </ul>
 
         <h3><i class="fa fa-file-text"></i> Publications</h3>
-        <ul style="padding-bottom:5px;">
-            <li>
-                <a href="#"><strong>ABC College of Engineering</strong></a>, 2011<br>
-                <span class="label label-primary">Publisher</span>
-                <span class="label label-default">Topic A</span>
-                <span class="label label-default">Topic B</span>
+        <div id="publication">
 
-            </li>
 
-        </ul>
+        </div>
 
         <h3><i class="fa fa-lightbulb-o"></i> Honors</h3>
-        <ul style="padding-bottom:5px;">
-            <li>
-                <a href="#"><strong>Patent Title A</strong></a>, Patent# XXXXXXXXX<br>
-                <span class="label label-info">Filing Status</span>
-                <span class="label label-default">Characteristic A</span>
-                <span class="label label-default">Characteristic B</span>
+        <div id="honors">
 
-            </li><br>
-            <li>
-                <a href="#"><strong>Patent Title B</strong></a>, Patent# YYYYYYYYY<br>
-                <span class="label label-info">Filing Status</span>
-                <span class="label label-default">Characteristic A</span>
-                <span class="label label-default">Characteristic B</span>
 
-            </li>
-        </ul>
+        </div>
 
         <h3><i class="fa fa-comments"></i> Activities</h3>
-        <ul style="padding-bottom:5px;">
-            <li>
-                <a href=""><strong>English</strong></a><br>
-                <span class="label  label-default">native</span>
+        <div id="activity">
 
-            </li><br>
-            <li>
-                <a href=""><strong>Spanish</strong></a><br>
-                <span class="label  label-default">fluent</span>
 
-            </li>
-        </ul>
+        </div>
 
 
     </div>
 
     <!-- contact / social icons for desktop/tablet view-->
-    <div class="col-lg-1 col-sm-1 col-md-1 hidden-xs" style="padding-left: 30px">
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Twitter"><i class="fa fa-twitter "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="LinkedIn"><i class="fa fa-linkedin  "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="GitHub"><i class="fa fa-github "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Flickr"><i class="fa fa-flickr "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Foursquare"><i class="fa fa-foursquare "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Facebook"><i class="fa fa-facebook "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Google+"><i class="fa fa-google-plus"></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Instagram"><i class="fa fa-instagram "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Skype"><i class="fa fa-skype "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Tumblr"><i class="fa fa-tumblr "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="YouTube"><i class="fa fa-youtube "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="#" title="Dribbble"><i class="fa fa-dribbble "></i></a></h2>
-        <h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="mailto:#" title="Email me"><i class="fa fa-envelope "></i></a></h2>
-
+    <div id="social-normal" class="col-lg-1 col-sm-1 col-md-1 hidden-xs" style="padding-left: 30px">
+        
     </div>
-
 </div><br>
-
 <!-- footer div-->
 <div class="container">
     <div class="row">
@@ -277,6 +150,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 <script>$(".tip").tooltip({placement:"bottom"})</script>
 <script>$(".tip2").tooltip({placement:"right"})</script>
+<script type="text/javascript" src="production/whenhub_api/profile.js"></script>
 
 </body>
 
