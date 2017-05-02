@@ -42,27 +42,27 @@ function parseInput(type) {
     var skill = $("#skill").val();
     var skillz =[];
     if(skill.length>0)
-        skillz = skill.split(/[ ,]+/);
+        skillz = skill.split(/[,]+/);
 
     var role = $("#role").val();
     var rolez = [];
     if(role.length>0)
-        rolez = role.split(/[ ,]+/);
+        rolez = role.split(/[,]+/);
 
     var sub = $("#subject").val();
     var subz = [];
     if(sub.length>0)
-        subz = sub.split(/[ ,]+/);
+        subz = sub.split(/[,]+/);
 
     var sts = $("#status").val();
     var stsz = [];
     if(sts.length>0)
-        stsz = sts.split(/[ ,]+/);
+        stsz = sts.split(/[,]+/);
 
     var misc = $("#misc").val();
     var miscz = [];
     if(misc.length>0)
-        miscz = misc.split(/[ ,]+/);
+        miscz = misc.split(/[,]+/);
 
     var TAGS = ["SKILL###", "ROLE###", "SUB###", "STS###", "MISC###"];
 
@@ -72,28 +72,41 @@ function parseInput(type) {
     console.log(skillz);
 
     for(idx=0; idx<skillz.length; idx++) {
+
+        skillz[idx] = skillz[idx].trim().replace(/^[ ]+/g, "");
+
         if(skillz[idx].startsWith("#"))
             tagArr.push(TAGS[0]+skillz[idx].substring(1));
     }
 
 
     for(idx=0; idx<rolez.length; idx++) {
+
+        rolez[idx] = rolez[idx].trim().replace(/^[ ]+/g, "");
+
         if(rolez[idx].startsWith("#"))
             tagArr.push(TAGS[1]+rolez[idx].substring(1));
     }
 
     for(idx=0; idx<subz.length; idx++) {
+
+        subz[idx] = subz[idx].trim().replace(/^[ ]+/g, "");
+
         if(subz[idx].startsWith("#"))
             tagArr.push(TAGS[2]+subz[idx].substring(1));
     }
 
 
     for(idx=0; idx<stsz.length; idx++) {
+        stsz[idx] = stsz[idx].trim().replace(/^[ ]+/g, "");
+
         if(stsz[idx].startsWith("#"))
             tagArr.push(TAGS[3]+stsz[idx].substring(1));
     }
 
     for(idx=0; idx<miscz.length; idx++) {
+        miscz[idx] = miscz[idx].trim().replace(/^[ ]+/g, "");
+
         if(miscz[idx].startsWith("#"))
             tagArr.push(TAGS[4]+miscz[idx].substring(1));
     }
@@ -241,7 +254,7 @@ function update_event(scheduleId, eventId, type) {
     var updateUrl = "https://api.whenhub.com/api/schedules/"+scheduleId+"/events/"+eventId+"?access_token="+accessToken;
 
     console.log(updateUrl);
-
+    
     $.ajax({
         type: "PUT",
         url: updateUrl,
@@ -478,27 +491,27 @@ function get_details(scheduleId, eventId, type) {
                     if(strippedTags[0]===TAGS[0]) {
                         old = skillBox.val();
                         if(old==="") skillBox.val("#"+strippedTags[1]);
-                        else skillBox.val(old +" "+ "#"+strippedTags[1]);
+                        else skillBox.val(old +", "+ "#"+strippedTags[1]);
                     }
                     else if(strippedTags[0]===TAGS[1]) {
                         old = roleBox.val();
                         if(old==="") roleBox.val("#"+strippedTags[1]);
-                        else roleBox.val(old +" "+ "#"+strippedTags[1]);
+                        else roleBox.val(old +", "+ "#"+strippedTags[1]);
                     }
                     else if(strippedTags[0]===TAGS[2]) {
                         old = subBox.val();
                         if(old==="") subBox.val("#"+strippedTags[1]);
-                        else subBox.val(old +" "+ "#"+strippedTags[1]);
+                        else subBox.val(old +", "+ "#"+strippedTags[1]);
                     }
                     else if(strippedTags[0]===TAGS[3]) {
                         old = stsBox.val();
                         if(old==="") stsBox.val("#"+strippedTags[1]);
-                        else stsBox.val(old +" "+ "#"+strippedTags[1]);
+                        else stsBox.val(old +", "+ "#"+strippedTags[1]);
                     }
                     else if(strippedTags[0]===TAGS[4]) {
                         old = miscBox.val();
                         if(old==="") miscBox.val("#"+strippedTags[1]);
-                        else miscBox.val(old +" "+ "#"+strippedTags[1]);
+                        else miscBox.val(old +", "+ "#"+strippedTags[1]);
                     }
                 }
             }
