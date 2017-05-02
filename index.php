@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])) {
+    ob_start();
+    header('Location: dashboard/basic.php');
+    ob_end_flush();
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +60,6 @@
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
-
         <h1 class="text-white"><i class="fa fa-asterisk"></i> Elegant Resume </h1>
         <div class="label label-small label-warning col-md-offset-5">Beta</div>
         <h3 class="text-white">Build your personal resume web app!</h3>

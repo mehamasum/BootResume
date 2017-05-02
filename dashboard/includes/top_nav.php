@@ -18,7 +18,7 @@
                         <li><a href="logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                     </ul>
                 </li>
-                <li><a target="_blank" href="../profile.php?username=<?php echo $_SESSION['user']?>"><i class="fa fa-home"></i> Live Resume</a></li>
+                <li><a target="_blank" href="../profile.php?username=<?php echo $_SESSION['user']?>"><i class="fa fa-globe"></i> Live</a></li>
             </ul>
         </nav>
     </div>

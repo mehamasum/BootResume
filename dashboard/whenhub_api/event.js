@@ -254,7 +254,7 @@ function update_event(scheduleId, eventId, type) {
     var updateUrl = "https://api.whenhub.com/api/schedules/"+scheduleId+"/events/"+eventId+"?access_token="+accessToken;
 
     console.log(updateUrl);
-    
+
     $.ajax({
         type: "PUT",
         url: updateUrl,
