@@ -10,7 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Elegant Resume</title>
+    <title>Social | Elegant Resume</title>
+    <?php include ('includes/fav.php') ?>
 
     <?php include ('includes/top_imports.php') ?>
 
@@ -32,6 +33,13 @@
                 <div class="page-title">
                     <div class="title_left">
                         <h3>Social Media</h3>
+                    </div>
+
+
+                    <div class="title_right">
+                        <div class="col-md-5 col-sm-5 col-xs-12 pull-right">
+                            <a href="help.php#social" class="btn btn-block btn-info"><i class="fa fa-info-circle"></i> Help </a>
+                        </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>

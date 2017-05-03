@@ -11,7 +11,8 @@ $schedule_id = $_SESSION['schedule_id'];  // "58fa07bbc7ddaa3b7464e0ac";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Elegant Resume</title>
+    <title>Activities | Elegant Resume</title>
+    <?php include ('includes/fav.php') ?>
 
     <?php include ('includes/top_imports.php') ?>
 

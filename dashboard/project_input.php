@@ -24,7 +24,8 @@ else {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Elegant Resume</title>
+    <title>Project | Elegant Resume</title>
+    <?php include ('includes/fav.php') ?>
 
     <?php include ('includes/top_imports.php') ?>
 
@@ -49,7 +50,7 @@ else {
 
                     <div class="title_right">
                         <div class="col-md-5 col-sm-5 col-xs-12 pull-right">
-                            <a href="#" class="btn btn-block btn-info"><i class="fa fa-info-circle"></i> Help </a>
+                            <a href="help.php#hon" class="btn btn-block btn-info"><i class="fa fa-info-circle"></i> Help </a>
                         </div>
                     </div>
                 </div>

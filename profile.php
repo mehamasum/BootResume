@@ -33,11 +33,11 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-fa fa-precomposed" sizes="144x144" href="../assets/ico/apple-touch-fa fa-144-precomposed.png">
-    <link rel="apple-touch-fa fa-precomposed" sizes="114x114" href="../assets/ico/apple-touch-fa fa-114-precomposed.png">
-    <link rel="apple-touch-fa fa-precomposed" sizes="72x72" href="../assets/ico/apple-touch-fa fa-72-precomposed.png">
-    <link rel="apple-touch-fa fa-precomposed" href="../assets/ico/apple-touch-fa fa-57-precomposed.png">
-    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    <link rel="apple-touch-fa fa-precomposed" sizes="144x144" href="build/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-fa fa-precomposed" sizes="114x114" href="build/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-fa fa-precomposed" sizes="72x72" href="build/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-fa fa-precomposed" href="build/ico/apple-touch-icon-57x57.png">
+    <link rel="shortcut icon" href="build/ico/favicon.ico">
 
     <!-- NProgress -->
     <link href="vendors/nprogress/nprogress.css" rel="stylesheet">

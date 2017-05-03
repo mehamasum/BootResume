@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Elegant Resume </title>
+    <title>Join | Elegant Resume</title>
+    <?php include ('includes/fav.php') ?>
 
     <!-- Animate.css -->
     <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
