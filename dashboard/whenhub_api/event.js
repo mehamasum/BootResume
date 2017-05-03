@@ -557,6 +557,11 @@ function get_details(scheduleId, eventId, type) {
 
 
 function delete_event(scheduleId, eventId, type) {
+    
+    if (confirm("Are you sure?") == false) {
+        return;
+    }
+
     NProgress.start();
     console.log(scheduleId+" "+eventId);
     var delUrl = "https://api.whenhub.com/api/schedules/"+scheduleId+"/events/"+eventId+"?access_token="+accessToken;
