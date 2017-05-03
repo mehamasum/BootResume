@@ -557,7 +557,7 @@ function get_details(scheduleId, eventId, type) {
 
 
 function delete_event(scheduleId, eventId, type) {
-    
+
     if (confirm("Are you sure?") == false) {
         return;
     }
