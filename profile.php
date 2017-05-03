@@ -5,7 +5,7 @@
         die();
     }
 
-    
+
 
 ?>
 
@@ -177,7 +177,7 @@
 <script>
     window.onload = function() {
         console.log("ready");
-        get_profile('<?php echo $_GET['username']?>', "PRO");
+        get_profile('<?php echo $_GET['username']?>');
     };
 </script>
 
