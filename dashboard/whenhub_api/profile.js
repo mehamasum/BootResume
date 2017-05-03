@@ -78,7 +78,7 @@ function get_profile (username) {
 
             NProgress.done();
 
-            $(".tip").tooltip({placement:"bottom"});
+            $(".tip").tooltip({placement:"top"});
 
             /*$('.tip2').each(function(i, obj) {
                 console.log(obj.html());
