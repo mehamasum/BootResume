@@ -68,7 +68,7 @@ function get_profile (username) {
 
 
 
-            make_social();
+            make_social(username);
             make_education();
             make_experience();
             make_project();
@@ -78,6 +78,8 @@ function get_profile (username) {
 
             NProgress.done();
 
+            $(".tip").tooltip({placement:"bottom"});
+            $(".tip2").tooltip({placement:"right"});
         }
     });
 
@@ -122,22 +124,27 @@ function make_education() {
 
         var x= all.EDU[i].primaryAction;
         var label, url;
+        var a_or_span;
 
         if(x==null){
-            label=url="";
+
+            a_or_span= '<span><strong>'+all['EDU'][i].name+'</strong></span>';
         }else{
             url=x.url;
             label=x.label;
+
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['EDU'][i].name+'</strong></a>';
         }
 
         temp+='<li>';
-        temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['EDU'][i].name+'</strong></a>, '+all['EDU'][i].customFieldData.degree+' '+ all['EDU'][i].customFieldData.area+', '+timePeriodStr+'<br>';
+        temp+=a_or_span+', '+all['EDU'][i].customFieldData.degree+' '+ all['EDU'][i].customFieldData.area+', '+timePeriodStr+'<br>';
 
         temp+=get_label(all['EDU'][i]);
 
         var desp= all['EDU'][i].description;
+
         if(desp!=null){
-            temp+='<br>'+desp;
+            temp+='<br><br>'+desp;
         }
 
         temp+='</li><br>';
@@ -188,21 +195,26 @@ function make_experience() {
         var x= all.EXP[i].primaryAction;
         var label, url;
 
+        var a_or_span;
+
         if(x==null){
-            label=url="";
+
+            a_or_span= '<span><strong>'+all['EXP'][i].name+'</strong></span>';
         }else{
             url=x.url;
             label=x.label;
+
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['EXP'][i].name+'</strong></a>';
         }
 
         temp+='<li>';
-        temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['EXP'][i].name+'</strong></a>, '+all['EXP'][i].customFieldData.role+' , '+timePeriodStr+'<br>';
+        temp+=a_or_span+', '+all['EXP'][i].customFieldData.role+', '+timePeriodStr+'<br>';
 
         temp+=get_label(all['EXP'][i]);
 
         var desp= all['EXP'][i].description;
         if(desp!=null){
-            temp+='<br>'+desp;
+            temp+='<br><br>'+desp;
         }
 
         temp+='</li><br>';
@@ -252,21 +264,27 @@ function make_project() {
         var x= all.PRO[i].primaryAction;
         var label, url;
 
+        var a_or_span;
+
         if(x==null){
-            label=url="";
+
+            a_or_span= '<span><strong>'+all['PRO'][i].name+'</strong></span>';
         }else{
             url=x.url;
             label=x.label;
+
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['PRO'][i].name+'</strong></a>';
         }
 
+
         temp+='<li>';
-        temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['PRO'][i].name+'</strong></a>, '+all['PRO'][i].customFieldData.role+' , '+timePeriodStr+'<br>';
+        temp+=a_or_span+', '+all['PRO'][i].customFieldData.role+' , '+timePeriodStr+'<br>';
 
         temp+=get_label(all['PRO'][i]);
 
         var desp= all['PRO'][i].description;
         if(desp!=null){
-            temp+='<br>'+desp;
+            temp+='<br><br>'+desp;
         }
 
         temp+='</li><br>';
@@ -304,12 +322,18 @@ function make_publication() {
         var x= all.PUB[i].primaryAction;
         var label, url;
 
+        var a_or_span;
+
         if(x==null){
-            label=url="";
+
+            a_or_span= '<span><strong>'+all['PUB'][i].name+'</strong></span>';
         }else{
             url=x.url;
             label=x.label;
+
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['PUB'][i].name+'</strong></a>';
         }
+
 
         var custom= all.PUB[i].customFieldData;
         var customf;
@@ -317,16 +341,16 @@ function make_publication() {
         if(custom==null){
             customf="";
         }else{
-            customf=custom.coauthor;
+            customf=", With "+custom.coauthor;
         }
         temp+='<li>';
-        temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['PUB'][i].name+'</strong></a>,'+customf +' , '+timePeriodStr+'<br>';
+        temp+=a_or_span + customf +', '+timePeriodStr+'<br>';
 
         temp+=get_label(all['PUB'][i]);
 
         var desp= all['PUB'][i].description;
         if(desp!=null){
-            temp+='<br>'+desp;
+            temp+='<br><br>'+desp;
         }
 
         temp+='</li><br>';
@@ -363,12 +387,18 @@ function make_honors() {
         var x= all.HON[i].primaryAction;
         var label, url;
 
+        var a_or_span;
+
         if(x==null){
-            label=url="";
+
+            a_or_span= '<span><strong>'+all['HON'][i].name+'</strong></span>';
         }else{
             url=x.url;
             label=x.label;
+
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['HON'][i].name+'</strong></a>';
         }
+
 
         var custom= all.HON[i].customFieldData;
         var customf;
@@ -376,16 +406,16 @@ function make_honors() {
         if(custom==null){
             customf="";
         }else{
-            customf=custom.issuer;
+            customf=", "+custom.issuer;
         }
         temp+='<li>';
-        temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['HON'][i].name+'</strong></a>,'+customf +' , '+timePeriodStr+'<br>';
+        temp+=a_or_span + customf +', '+timePeriodStr+'<br>';
 
         temp+=get_label(all['HON'][i]);
 
         var desp= all['HON'][i].description;
         if(desp!=null){
-            temp+='<br>'+desp;
+            temp+='<br><br>'+desp;
         }
 
         temp+='</li><br>';
@@ -433,12 +463,18 @@ function make_activity() {
         var x= all.ACT[i].primaryAction;
         var label, url;
 
+        var a_or_span;
+
         if(x==null){
-            label=url="";
+
+            a_or_span= '<span><strong>'+all['ACT'][i].name+'</strong></span>';
         }else{
             url=x.url;
             label=x.label;
+
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['ACT'][i].name+'</strong></a>';
         }
+
 
         var custom= all.ACT[i].customFieldData;
         var customf;
@@ -446,16 +482,16 @@ function make_activity() {
         if(custom==null){
             customf="";
         }else{
-            customf=custom.role;
+            customf=", "+custom.role;
         }
         temp+='<li>';
-        temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['ACT'][i].name+'</strong></a>,'+customf +' , '+timePeriodStr+'<br>';
+        temp+=a_or_span + customf +', '+timePeriodStr+'<br>';
 
         temp+=get_label(all['ACT'][i]);
 
         var desp= all['ACT'][i].description;
         if(desp!=null){
-            temp+='<br>'+desp;
+            temp+='<br><br>'+desp;
         }
 
         temp+='</li><br>';
@@ -546,7 +582,7 @@ function get_events(scheduleId) {
 
 
 
-function make_social() {
+function make_social(username) {
 
     //  SELECT `username`, `linkedin`, `twitter`, `github`, `facebook`, `googleplus`, `skype`, `flickr`, `instagram`, `tumblr`, `youtube` FROM `social` WHERE 1
 
@@ -556,7 +592,7 @@ function make_social() {
 
     $.post("./db-app/social-from-profile.php", {
 
-        data: "null"
+        profile: username
 
     }, function (data) {
 
@@ -602,7 +638,7 @@ function make_social() {
                 }
 
 
-                temp+='<a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="'+
+                temp+='<a style="text-decoration: none" href="'+
                     ara[0][i+1]+'" title="'+title[i]+'"><i class="fa fa-'+fa[i] +'"></i></a>';
 
             }

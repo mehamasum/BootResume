@@ -90,7 +90,7 @@
             <h3>
                 <div id="social-mob">
 
-                </div>>
+                </div>
             </h3>
         </div>
     </div>
@@ -169,8 +169,10 @@
     </div>
 </div>
 
+<!--
 <script>$(".tip").tooltip({placement:"bottom"})</script>
 <script>$(".tip2").tooltip({placement:"right"})</script>
+--->
 <script type="text/javascript" src="dashboard/whenhub_api/profile.js"></script>
 
 
