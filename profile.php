@@ -1,12 +1,10 @@
 <?php
-
     if($_GET['username']==null || strcmp($_GET['username'],"")==0 ){
+        ob_start();
         header('Location: dashboard/page_404.html');
+        ob_end_flush();
         die();
     }
-
-
-
 ?>
 
 
@@ -103,14 +101,14 @@
 
 
         <div id="objective" style="display: block">
-            <h3><i class="fa fa-tasks"></i> Objective</h3>
-            <ul style="padding-bottom:5px;">
+            <h3><i class="fa fa-check-square-o"></i> Objective</h3>
+            <ul>
 
             </ul>
         </div>
 
         <div id="education-block">
-            <h3><i class="fa fa-book"></i> Education</h3>
+            <h3><i class="fa fa-graduation-cap"></i> Education</h3>
             <div id="education">
 
             </div>
@@ -139,14 +137,14 @@
         </div>
 
         <div id="honors-block">
-            <h3><i class="fa fa-lightbulb-o"></i> Honors</h3>
+            <h3><i class="fa fa-trophy"></i> Honors</h3>
             <div id="honors">
 
             </div>
         </div>
 
         <div id="activity-block">
-            <h3><i class="fa fa-comments"></i> Activities</h3>
+            <h3><i class="fa fa-users"></i> Activities</h3>
             <div id="activity">
 
             </div>

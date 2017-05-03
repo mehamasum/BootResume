@@ -13,7 +13,7 @@ all['ACT']=[];
 all['PUB']=[];
 all['HON']=[];
 
-var monthName=['dummy','January','February','March','April','May','June','July','August','September','October','November','December'];
+var monthName=['dummy','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 
 
@@ -43,7 +43,7 @@ function get_profile (username) {
                 image= 'images/avatar.png';
 
             document.getElementById("basic-normal").innerHTML='<img src="'+image+'" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>'+
-                '<h3 class="media-heading" style="margin-top: 10px">'+ara[0][6] +'<small>'+ara[0][8]+'</small></h3>'+
+                '<h3 class="media-heading" style="margin-top: 10px">'+ara[0][6]+" " +'<small>'+ara[0][8]+'</small></h3>'+
                 '<span class="">'+ara[0][3]+' | '+ara[0][4]+'</span>';
 
 
@@ -52,7 +52,7 @@ function get_profile (username) {
                 '<span class="">'+ara[0][3]+' | '+ara[0][4]+'</span>';
 
             if(ara[0][7].length>0) {
-                document.getElementById("objective").innerHTML = '<h3><i class="fa fa-tasks"></i> Objective</h3>'
+                document.getElementById("objective").innerHTML = '<h3><i class="fa fa-check-square-o"></i> Objective</h3>'
                     + ' <ul style="padding-bottom:5px;">'
                     + ara[0][7]
                     + '</ul>';
@@ -79,7 +79,10 @@ function get_profile (username) {
             NProgress.done();
 
             $(".tip").tooltip({placement:"bottom"});
-            $(".tip2").tooltip({placement:"right"});
+
+            /*$('.tip2').each(function(i, obj) {
+                console.log(obj.html());
+            });*/
         }
     });
 
@@ -119,7 +122,7 @@ function make_education() {
         //if(type==="PUB" || type==="HON")
         //  timePeriodStr = obj['when']['startDate'];
         //else
-        timePeriodStr = start+" to "+endFound;
+        timePeriodStr = start+" - "+endFound;
 
 
         var x= all.EDU[i].primaryAction;
@@ -189,7 +192,7 @@ function make_experience() {
         //if(type==="PUB" || type==="HON")
         //  timePeriodStr = obj['when']['startDate'];
         //else
-        timePeriodStr = start+" to "+endFound;
+        timePeriodStr = start+" - "+endFound;
 
 
         var x= all.EXP[i].primaryAction;
@@ -258,7 +261,7 @@ function make_project() {
         //if(type==="PUB" || type==="HON")
         //  timePeriodStr = obj['when']['startDate'];
         //else
-        timePeriodStr = start+" to "+endFound;
+        timePeriodStr = start+" - "+endFound;
 
 
         var x= all.PRO[i].primaryAction;
@@ -458,7 +461,7 @@ function make_activity() {
 
         var timePeriodStr;
 
-        timePeriodStr = start+" to "+endFound;
+        timePeriodStr = start+" - "+endFound;
 
         var x= all.ACT[i].primaryAction;
         var label, url;
@@ -644,6 +647,9 @@ function make_social(username) {
             }
 
             document.getElementById("social-mob").innerHTML=temp;
+
+            $(".tip2").tooltip({placement:"right"});
+
         }
     });
 }

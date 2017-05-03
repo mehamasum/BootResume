@@ -230,7 +230,7 @@ else {
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="btn_url">Action Button Url
                                                     </label>
                                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input data-parsley-type="url" type="text" id="btn_url" placeholder="Url" class="form-control col-md-7 col-xs-12">
+                                                        <input data-parsley-type="url" pattern="https?://.+" type="text" id="btn_url" placeholder="Url" class="form-control col-md-7 col-xs-12">
                                                     </div>
 
                                                 </div>
