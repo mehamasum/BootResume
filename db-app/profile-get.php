@@ -7,12 +7,11 @@
  */
 
 
-session_start();
 
 //require_once('dbconnect_u.php');
 require_once('db_local.php');
 
-$username= $_SESSION['profile'];
+$username= $_POST['profile'];
 
 $sql= "select * FROM users WHERE username='".$username."';";
 

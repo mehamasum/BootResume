@@ -1,7 +1,11 @@
 <?php
-    session_start();
 
-    $_SESSION['profile']=$_GET['username'];
+    if($_GET['username']==null || strcmp($_GET['username'],"")==0 ){
+        header('Location: dashboard/page_404.html');
+        die();
+    }
+
+    
 
 ?>
 
@@ -10,7 +14,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Profile</title>
+    <title><?php echo $_GET['username']." | Boot Resume";   ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="TAG_LINE_ABOUT_YOU">
     <meta name="author" content="YOUR_NAME">
@@ -101,46 +105,51 @@
         <div id="objective" style="display: block">
             <h3><i class="fa fa-tasks"></i> Objective</h3>
             <ul style="padding-bottom:5px;">
-                To obtain a professional position in the consulting industry utilizing my relevant experience, technical expertise,
-                and problem solving skills.
+
             </ul>
         </div>
 
-        <h3><i class="fa fa-book"></i> Education</h3>
-        <div id="education">
+        <div id="education-block">
+            <h3><i class="fa fa-book"></i> Education</h3>
+            <div id="education">
 
-
-        </div>
-
-        <h3><i class="fa fa-briefcase"></i> Work</h3>
-        <div id="experience">
-
-
-        </div>
-
-        <h3><i class="fa fa-flask"></i> Projects</h3>
-        <div id="project">
-
-
+            </div>
         </div>
 
 
-        <h3><i class="fa fa-file-text"></i> Publications</h3>
-        <div id="publication">
+        <div id="experience-block">
+            <h3><i class="fa fa-briefcase"></i> Work</h3>
+            <div id="experience">
 
-
+            </div>
         </div>
 
-        <h3><i class="fa fa-lightbulb-o"></i> Honors</h3>
-        <div id="honors">
+        <div id="project-block">
+            <h3><i class="fa fa-flask"></i> Projects</h3>
+            <div id="project">
 
-
+            </div>
         </div>
 
-        <h3><i class="fa fa-comments"></i> Activities</h3>
-        <div id="activity">
+        <div id="publication-block">
+            <h3><i class="fa fa-file-text"></i> Publications</h3>
+            <div id="publication">
 
+            </div>
+        </div>
 
+        <div id="honors-block">
+            <h3><i class="fa fa-lightbulb-o"></i> Honors</h3>
+            <div id="honors">
+
+            </div>
+        </div>
+
+        <div id="activity-block">
+            <h3><i class="fa fa-comments"></i> Activities</h3>
+            <div id="activity">
+
+            </div>
         </div>
 
 
@@ -163,6 +172,14 @@
 <script>$(".tip").tooltip({placement:"bottom"})</script>
 <script>$(".tip2").tooltip({placement:"right"})</script>
 <script type="text/javascript" src="dashboard/whenhub_api/profile.js"></script>
+
+
+<script>
+    window.onload = function() {
+        console.log("ready");
+        get_profile('<?php echo $_GET['username']?>', "PRO");
+    };
+</script>
 
 </body>
 

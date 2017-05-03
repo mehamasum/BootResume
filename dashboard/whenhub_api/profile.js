@@ -16,23 +16,18 @@ all['HON']=[];
 var monthName=['dummy','January','February','March','April','May','June','July','August','September','October','November','December'];
 
 
-$(window).load(function() {
 
+
+function get_profile (username) {
     $.post("./db-app/profile-get.php", {
 
-        data: "null"
+        profile: username
 
     }, function (data) {
 
         if(data.includes("error")){
-            new PNotify({
-                title: 'Error :(',
-                text: "No user found",
-                type: 'error',
-                styling: 'bootstrap3'
-            });
 
-            NProgress.done();
+            window.location.href="dashboard/page_404.html";
         }
         else{
             console.log(data);
@@ -49,7 +44,7 @@ $(window).load(function() {
 
             document.getElementById("basic-normal").innerHTML='<img src="'+image+'" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>'+
                 '<h3 class="media-heading" style="margin-top: 10px">'+ara[0][6] +'<small>'+ara[0][8]+'</small></h3>'+
-            '<span class="">'+ara[0][3]+' | '+ara[0][4]+'</span>';
+                '<span class="">'+ara[0][3]+' | '+ara[0][4]+'</span>';
 
 
             document.getElementById("basic-mob").innerHTML='<img src="'+image+'" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>'+
@@ -86,10 +81,7 @@ $(window).load(function() {
         }
     });
 
-
-
-
-});
+}
 
 
 
@@ -97,6 +89,10 @@ function make_education() {
     var education= document.getElementById("education");
 
     var temp='<ul style="padding-bottom:5px;">';
+
+    if(all['EDU'].length==0){
+        document.getElementById("education-block").style.display='none';
+    }
 
     for(var i=0;i<all['EDU'].length;i++){
 
@@ -138,6 +134,12 @@ function make_education() {
         temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['EDU'][i].name+'</strong></a>, '+all['EDU'][i].customFieldData.degree+' '+ all['EDU'][i].customFieldData.area+', '+timePeriodStr+'<br>';
 
         temp+=get_label(all['EDU'][i]);
+
+        var desp= all['EDU'][i].description;
+        if(desp!=null){
+            temp+='<br>'+desp;
+        }
+
         temp+='</li><br>';
 
     }
@@ -152,6 +154,10 @@ function make_experience() {
     var experience= document.getElementById("experience");
 
     var temp='<ul style="padding-bottom:5px;">';
+
+    if(all['EXP'].length==0){
+        document.getElementById("experience-block").style.display='none';
+    }
 
     for(var i=0;i<all['EXP'].length;i++){
 
@@ -193,6 +199,12 @@ function make_experience() {
         temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['EXP'][i].name+'</strong></a>, '+all['EXP'][i].customFieldData.role+' , '+timePeriodStr+'<br>';
 
         temp+=get_label(all['EXP'][i]);
+
+        var desp= all['EXP'][i].description;
+        if(desp!=null){
+            temp+='<br>'+desp;
+        }
+
         temp+='</li><br>';
 
     }
@@ -206,6 +218,10 @@ function make_project() {
     var project= document.getElementById("project");
 
     var temp='<ul style="padding-bottom:5px;">';
+
+    if(all['PRO'].length==0){
+        document.getElementById("project-block").style.display='none';
+    }
 
     for(var i=0;i<all['PRO'].length;i++){
 
@@ -247,6 +263,12 @@ function make_project() {
         temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['PRO'][i].name+'</strong></a>, '+all['PRO'][i].customFieldData.role+' , '+timePeriodStr+'<br>';
 
         temp+=get_label(all['PRO'][i]);
+
+        var desp= all['PRO'][i].description;
+        if(desp!=null){
+            temp+='<br>'+desp;
+        }
+
         temp+='</li><br>';
 
     }
@@ -261,6 +283,10 @@ function make_publication() {
     var publication= document.getElementById("publication");
 
     var temp='<ul style="padding-bottom:5px;">';
+
+    if(all['PUB'].length==0){
+        document.getElementById("publication-block").style.display='none';
+    }
 
     for(var i=0;i<all['PUB'].length;i++){
 
@@ -297,6 +323,12 @@ function make_publication() {
         temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['PUB'][i].name+'</strong></a>,'+customf +' , '+timePeriodStr+'<br>';
 
         temp+=get_label(all['PUB'][i]);
+
+        var desp= all['PUB'][i].description;
+        if(desp!=null){
+            temp+='<br>'+desp;
+        }
+
         temp+='</li><br>';
 
     }
@@ -310,6 +342,10 @@ function make_honors() {
     var honors= document.getElementById("honors");
 
     var temp='<ul style="padding-bottom:5px;">';
+
+    if(all['ACT'].length==0){
+        document.getElementById("honors-block").style.display='none';
+    }
 
     for(var i=0;i<all['HON'].length;i++){
 
@@ -346,6 +382,12 @@ function make_honors() {
         temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['HON'][i].name+'</strong></a>,'+customf +' , '+timePeriodStr+'<br>';
 
         temp+=get_label(all['HON'][i]);
+
+        var desp= all['HON'][i].description;
+        if(desp!=null){
+            temp+='<br>'+desp;
+        }
+
         temp+='</li><br>';
 
     }
@@ -359,6 +401,11 @@ function make_activity() {
     var activity= document.getElementById("activity");
 
     var temp='<ul style="padding-bottom:5px;">';
+
+    if(all['ACT'].length==0){
+        document.getElementById("activity-block").style.display='none';
+    }
+
 
     for(var i=0;i<all['ACT'].length;i++){
 
@@ -405,6 +452,12 @@ function make_activity() {
         temp+='<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['ACT'][i].name+'</strong></a>,'+customf +' , '+timePeriodStr+'<br>';
 
         temp+=get_label(all['ACT'][i]);
+
+        var desp= all['ACT'][i].description;
+        if(desp!=null){
+            temp+='<br>'+desp;
+        }
+
         temp+='</li><br>';
 
     }
@@ -433,34 +486,7 @@ function get_label(obj) {
             ret+= '">'+strippedTags[1]+'</span> ' ;
 
 
-            /*
-            var old;
-            if(strippedTags[0]===TAGS[0]) {
-                old = skillBox.val();
-                if(old==="") skillBox.val("#"+strippedTags[1]);
-                else skillBox.val(old +" "+ "#"+strippedTags[1]);
-            }
-            else if(strippedTags[0]===TAGS[1]) {
-                old = roleBox.val();
-                if(old==="") roleBox.val("#"+strippedTags[1]);
-                else roleBox.val(old +" "+ "#"+strippedTags[1]);
-            }
-            else if(strippedTags[0]===TAGS[2]) {
-                old = subBox.val();
-                if(old==="") subBox.val("#"+strippedTags[1]);
-                else subBox.val(old +" "+ "#"+strippedTags[1]);
-            }
-            else if(strippedTags[0]===TAGS[3]) {
-                old = stsBox.val();
-                if(old==="") stsBox.val("#"+strippedTags[1]);
-                else stsBox.val(old +" "+ "#"+strippedTags[1]);
-            }
-            else if(strippedTags[0]===TAGS[4]) {
-                old = miscBox.val();
-                if(old==="") miscBox.val("#"+strippedTags[1]);
-                else miscBox.val(old +" "+ "#"+strippedTags[1]);
-            }
-            */
+
         }
     }
     return ret;
@@ -475,30 +501,6 @@ function get_events(scheduleId) {
     var event_create_url= "https://api.whenhub.com/api/schedules/"+scheduleId+"/events?access_token="+accessToken;
     console.log(event_create_url);
 
-    /*
-     {
-     "when": {
-     "period": "month",
-     "startDate": "2017-03",        --> Start Date
-     "endDate": null --> End Date
-     },
-     "name": "Test Event api test",  ---> Event Name
-     "description": "string",       ---> Description
-     "tags": [
-     "string"                    --> Type###String
-     ],
-
-     "customFieldData": {           --> Event Sub Titles
-     "type": "education",
-     "cg": "4.0"
-
-     },
-     "primaryAction": {
-     "name/label": "string",    --> Action Button Title
-     "url": "string"            --> Action Url
-     },
-     }
-     */
 
     $.ajax({
         type: "GET",
@@ -541,133 +543,6 @@ function get_events(scheduleId) {
 }
 
 
-function get_details(scheduleId, eventId, type) {
-    console.log(scheduleId+" "+eventId+" "+type);
-
-
-    //var scheduleId = "58fa07bbc7ddaa3b7464e0ac";
-    var getUrl = "https://api.whenhub.com/api/schedules/"+scheduleId+"/events/"+eventId+"?access_token="+accessToken;
-    console.log(getUrl);
-
-    $.ajax({
-        type: "GET",
-        url: getUrl,
-        async: false,
-        complete: function(xhr, statusText){
-
-            console.log(xhr.status+" "+statusText);
-        },
-        success: function (data) {
-            console.log(data);
-
-            var obj = data;
-
-            var s_found = obj.when.startDate;
-            console.log(s_found);
-
-            $("#startYear").val(s_found.substring(0, 4));
-            $("#startMonth").val(s_found.substring(5, 7));
-
-            var e_found = obj.when.endDate;
-            console.log(e_found);
-            if (!(e_found===null)) {
-                $("#endYear").val(e_found.substring(0, 4));
-                $("#endMonth").val(e_found.substring(5, 7));
-            }
-
-            $("#name").val(obj.name);
-
-
-            if (!("undefined" === typeof obj.description)) {
-                $("#description").val(obj.description);
-            }
-
-
-            var tagArr = obj.tags;
-
-            if(tagArr.length>1) {
-
-                var TAGS = ["SKILL", "ROLE", "SUB", "STS", "MISC"];
-
-                var skillBox = $("#skill");
-                var roleBox = $("#role");
-                var subBox = $("#subject");
-                var stsBox = $("#status");
-                var miscBox = $("#misc");
-
-                for(var itr = 1; itr< obj.tags.length; itr++) {
-                    var foundTag = obj.tags[itr];
-                    var strippedTags = foundTag.split("###");
-
-                    console.log(strippedTags[0]);
-                    console.log(strippedTags[1]);
-
-                    var old;
-                    if(strippedTags[0]===TAGS[0]) {
-                        old = skillBox.val();
-                        if(old==="") skillBox.val("#"+strippedTags[1]);
-                        else skillBox.val(old +" "+ "#"+strippedTags[1]);
-                    }
-                    else if(strippedTags[0]===TAGS[1]) {
-                        old = roleBox.val();
-                        if(old==="") roleBox.val("#"+strippedTags[1]);
-                        else roleBox.val(old +" "+ "#"+strippedTags[1]);
-                    }
-                    else if(strippedTags[0]===TAGS[2]) {
-                        old = subBox.val();
-                        if(old==="") subBox.val("#"+strippedTags[1]);
-                        else subBox.val(old +" "+ "#"+strippedTags[1]);
-                    }
-                    else if(strippedTags[0]===TAGS[3]) {
-                        old = stsBox.val();
-                        if(old==="") stsBox.val("#"+strippedTags[1]);
-                        else stsBox.val(old +" "+ "#"+strippedTags[1]);
-                    }
-                    else if(strippedTags[0]===TAGS[4]) {
-                        old = miscBox.val();
-                        if(old==="") miscBox.val("#"+strippedTags[1]);
-                        else miscBox.val(old +" "+ "#"+strippedTags[1]);
-                    }
-                }
-            }
-
-
-            if(type==="EDU") {
-                $("#subtitle1").val(obj.customFieldData.degree);
-                $("#subtitle2").val(obj.customFieldData.area);
-            }
-
-            if(type==="EXP" || type==="PRO"|| type==="ACT") {
-                $("#subtitle1").val(obj.customFieldData.role);
-            }
-
-            if(type==="PUB" && !("undefined" === typeof obj.customFieldData)) {
-                $("#subtitle1").val(obj.customFieldData.coauthor);
-            }
-
-            if(type==="HON" && !("undefined" === typeof obj.customFieldData)) {
-                $("#subtitle1").val(obj.customFieldData.issuer);
-            }
-
-            if (!("undefined" === typeof obj.primaryAction)) {
-                $("#btn_label").val(obj.primaryAction.label);
-                $("#btn_url").val(obj.primaryAction.url);
-            }
-
-
-        },
-        error: function(xhr, statusText, err){
-            console.log("Error: " + xhr.status);
-            new PNotify({
-                title: 'Error fetching data',
-                text: statusText,
-                type: 'error',
-                styling: 'bootstrap3'
-            });
-        }
-    });
-
-}
 
 
 
@@ -702,6 +577,11 @@ function make_social() {
 
             for(var i=0;i<title.length;i++){
 
+                if(ara[0][i+1].length==0 || ara[0][i+1]==null){
+                    //  console.log("here");
+                    continue;
+                }
+
             temp+='<h2><a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="'+
                 ara[0][i+1]+'" title="'+title[i]+'"><i class="fa fa-'+fa[i] +'"></i></a></h2>';
 
@@ -713,6 +593,14 @@ function make_social() {
             temp='';
 
             for(i=0;i<title.length;i++){
+
+                console.log("social length" + ara[0][i+1].length);
+
+                if(ara[0][i+1].length==0 || ara[0][i+1]==null){
+                  //  console.log("here");
+                    continue;
+                }
+
 
                 temp+='<a style="text-decoration: none" data-toggle="tooltip" class="tip2" href="'+
                     ara[0][i+1]+'" title="'+title[i]+'"><i class="fa fa-'+fa[i] +'"></i></a>';

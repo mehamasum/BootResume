@@ -68,7 +68,7 @@
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="<?php echo $m?>"><?php echo $m?>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input data-parsley-type="url" type="text" id="<?php echo $m?>"  class="form-control col-md-7 col-xs-12">
+                                                <input type="url" pattern="https?://.+" id="<?php echo $m?>"  class="form-control col-md-7 col-xs-12">
                                             </div>
                                         </div>
 
