@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['user'])) {
+    ob_start();
+    header('Location: dashboard/basic.php');
+    ob_end_flush();
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,12 +60,11 @@
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
-
         <h1 class="text-white"><i class="fa fa-asterisk"></i> Elegant Resume </h1>
         <div class="label label-small label-warning col-md-offset-5">Beta</div>
         <h3 class="text-white">Build your personal resume web app!</h3>
         <br>
-        <a href="production/login.php" class="btn btn-primary btn-lg">Get Started</a>
+        <a href="dashboard/login.php" class="btn btn-primary btn-lg">Get Started</a>
     </div>
 </header>
 
@@ -82,7 +91,19 @@
                 <h2 style="color: white">Why Elegant Resume?</h2>
                 <br/><br/>
                 <div class="row">
-                    <div class="col-md-4 col-sm-8">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-money fa-stack-1x text-primary"></i>
+                            </span>
+                            <h4>
+                                <strong>Free</strong>
+                            </h4>
+                            <p>Elegant Resume is free of any cost.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -94,7 +115,7 @@
                             <p>Easy to use dashboard to build your resume.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-8">
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -106,7 +127,7 @@
                             <p>Simple looking interactive tags on your resume.</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-8">
+                    <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>

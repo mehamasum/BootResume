@@ -25,7 +25,7 @@
     <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -33,16 +33,28 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-fa fa-precomposed" sizes="144x144" href="../assets/ico/apple-touch-fa fa-144-precomposed.png">
-    <link rel="apple-touch-fa fa-precomposed" sizes="114x114" href="../assets/ico/apple-touch-fa fa-114-precomposed.png">
-    <link rel="apple-touch-fa fa-precomposed" sizes="72x72" href="../assets/ico/apple-touch-fa fa-72-precomposed.png">
-    <link rel="apple-touch-fa fa-precomposed" href="../assets/ico/apple-touch-fa fa-57-precomposed.png">
-    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    <link rel="apple-touch-fa fa-precomposed" sizes="144x144" href="build/ico/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-fa fa-precomposed" sizes="114x114" href="build/ico/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-fa fa-precomposed" sizes="72x72" href="build/ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-fa fa-precomposed" href="build/ico/apple-touch-icon-57x57.png">
+    <link rel="shortcut icon" href="build/ico/favicon.ico">
+
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <script>
+        // NProgress
+        if (typeof NProgress != 'undefined') {
+            $(document).ready(function () {
+                NProgress.start();
+            });
+        }
+    </script>
 
 
 </head>
 
-<body style="background:#E8E8E8; padding-top:20px; padding-bottom:20px; /*font-family: 'Titillium Web', sans-serif;*/">
+<body style="background:#E8E8E8; padding-top:20px; padding-bottom:20px; font-family: 'Lato', sans-serif;">
 <!--- head block --->
 <div class="container head_cont">
 
@@ -143,14 +155,14 @@
 <div class="container">
     <div class="row">
 			<span class="span8 offset2 text-center">
-				<p><small>© 2017 <a href="production/login.php">Elegant Resume</a></small></p>
+				<p><small>© 2017 <a href="dashboard/login.php">Elegant Resume</a></small></p>
 			</span>
     </div>
 </div>
 
 <script>$(".tip").tooltip({placement:"bottom"})</script>
 <script>$(".tip2").tooltip({placement:"right"})</script>
-<script type="text/javascript" src="production/whenhub_api/profile.js"></script>
+<script type="text/javascript" src="dashboard/whenhub_api/profile.js"></script>
 
 </body>
 
