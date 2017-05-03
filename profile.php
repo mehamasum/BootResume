@@ -136,7 +136,7 @@
 
     <!-- contact / social icons for desktop/tablet view-->
     <div id="social-normal" class="col-lg-1 col-sm-1 col-md-1 hidden-xs" style="padding-left: 30px">
-        
+
     </div>
 </div><br>
 <!-- footer div-->

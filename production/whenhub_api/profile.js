@@ -174,7 +174,7 @@ function make_experience() {
         timePeriodStr = start+" to "+endFound;
 
 
-        var x= all.PRO[i].primaryAction;
+        var x= all.EXP[i].primaryAction;
         var label, url;
 
         if(x==null){
