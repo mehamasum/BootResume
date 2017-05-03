@@ -14,13 +14,13 @@ function add_id_to_db(username, id) {
         if (data.includes("success")) {
 
             console.log("schedule id inserted");
-            window.location.href = "basic.php";
+            window.location.href = "index.php";
 
         }
         else {
             console.log("error in adding schedule id");
         }
-        window.location.href = "basic.php";
+        window.location.href = "index.php";
     });
 }
 
@@ -48,7 +48,7 @@ function login_submit() {
             //sessionStorage.setItem("name",name);
             // meha: session stored in php now
 
-            window.location.href = "basic.php";
+            window.location.href = "index.php";
             //document.getElementById("error_message").innerHTML = data;
         }
         else {
@@ -96,7 +96,7 @@ function signup_submit() {
             console.log("after creating schedule "+id);
             add_id_to_db(username,id);
 
-            //window.location.href = "basic.php";
+            //window.location.href = "index.php";
             //document.getElementById("error_message").innerHTML = data;
         }
         else {

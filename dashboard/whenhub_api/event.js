@@ -218,7 +218,7 @@ function create_event(scheduleId, type) {
                 type: 'success',
                 styling: 'bootstrap3'
             });
-            var redir= "basic.php";
+            var redir= "index.php";
             if(type==="EDU")
                 redir = "education.php";
             else if(type==="EXP")
@@ -274,7 +274,7 @@ function update_event(scheduleId, eventId, type) {
                 type: 'success',
                 styling: 'bootstrap3'
             });
-            var redir= "basic.php";
+            var redir= "index.php";
             if(type==="EDU")
                 redir = "education.php";
             else if(type==="EXP")
