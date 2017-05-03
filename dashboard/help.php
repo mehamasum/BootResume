@@ -34,7 +34,7 @@
             <h3>Help</h3>
           </div>
 
-          <div class="title_right">
+          <div class="title_right" style="display: none">
             <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Searching for...">
@@ -64,15 +64,13 @@
                   <p class="p-near-ul">The first part of your résumé is the Header which needs to include the following
                     information:</p>
                   <ul>
-                    <li><p><b>Picture</b>: this is optional, depending on the country/culture you are applying.</p></li>
+                    <li><p><b>Picture</b>: Pick a professional picture, resize or crop it as necessary after uploading</p></li>
+                    <li><p><b>Country</b>: Listing your Country is mandatory. This is especially needed when your
+                        application is being scanned by an ATS software.</p></li>
                     <li><p><b>Email Address</b>: your email should be just your name or some professional variations of
                         it.</p></li>
                     <li><p><b>Phone Number</b>: make sure to write the number where you are available most of the time.
                       </p></li>
-                    <li><p><b>Address</b>: listing your City/Country is mandatory. This is especially needed when your
-                        application is being scanned by an ATS software.</p></li>
-                    <li><p><b>Social Media Profiles</b>: Make an audit of your social media profiles and be sure you do
-                        not have any content that might create a bad impression about you.</p></li>
                   </ul>
                 </div>
               </div>
@@ -90,22 +88,19 @@
               </div>
               <div class="x_content">
                 <div class="col-md-12 col-lg-12 col-sm-12">
-                  <p>The second most important section is “Skills &amp; Competencies.” Try to keep them targeted for the
-                    position you are applying for. If for example, you are applying for a job as a Marketing Manager you
-                    should not list a skill such as “breakdance” that is not relevant for this particular job. </p>
-                  <p class="p-near-ul">General tips for the Skills &amp; Competencies include the following: </p>
+                  In case you are a student, recent graduate or do not have any work experience, we suggest to highlight the “Education” section at the top of your résumé instead of Work Experience. Remember to arrange this section in reverse order. If, for example, you have a Master’s and a Bachelor's Degree, make sure that you list first your Master’s Degree. If you already have a Bachelor’s Degree, you should not include your High School details.
+
+                  Include the Universities/Colleges/Academies/Schools, the name of the program and the courses that you took and are relevant to the position you are applying for.
+                  Do NOT falsify anything when it comes to your education. It comes without saying, that if you exaggerate or lie about it, somebody will eventually notice it.
+
+                  <p class="p-near-ul">The mandatory information for this section is: </p>
                   <ul>
-                    <li><p>Read the job ad many times and understand what skills are sought by the employer before
-                        writing this section. Most of the time you will find the skills that are required for that
-                        specific position in the ad. </p></li>
-                    <li><p>Using industry or job specific skills in your résumé will enable your application to pass
-                        through an applicant tracking system (ATS). </p></li>
-                    <li><p>Search on the internet for the skills that are most needed in the industry you are applying
-                        for a list the ones that you possess. </p></li>
-                    <li><p>Include as well the “Soft Skills” that are demanded by almost all the jobs. E.g.:
-                        Self-motivation, Communication, Time Management, Public Speaking, Leadership, Storytelling. </p>
-                    </li>
+                    <li>Name of the School</li>
+                    <li>Degree</li>
+                    <li>Area of Study</li>
+                    <li>Time line</li>
                   </ul>
+
                 </div>
               </div>
             </div>
@@ -122,36 +117,15 @@
               </div>
               <div class="x_content">
                 <div class="col-md-12 col-lg-12 col-sm-12">
-                  <p>The first section of your résumé should be Work Experience in the case you have a couple of years of
+                  <p>The most important section of your résumé should be Work Experience in the case you have a couple of years of
                     related work experience for the job you are applying for.</p>
-                  <p class="p-near-ul">The <i>mandatory</i> information for this section is: </p>
+                  <p class="p-near-ul">The mandatory information for this section is: </p>
                   <ul>
-                    <li><p>Employment Period.</p></li>
-                    <li><p>Position/Title. </p></li>
-                    <li><p>Name of the Company/Organisation. </p></li>
-                    <li><p>Accomplishments/Responsibilities or Tasks.</p></li>
+                    <li>Name of the Company/Organisation</li>
+                    <li>Employment Period</li>
+                    <li>Position/Title/Role </li>
                   </ul>
-                  <p class="p-near-ul">You may include as well the following <i>optional</i> information: </p>
-                  <ul>
-                    <li><p>City/Country of the previous company. </p></li>
-                    <li><p>Company Description. </p></li>
-                    <li><p>Contact Info of a supervisor or colleague. </p></li>
-                  </ul>
-                  <p class="p-near-ul">General tips for Work Experience section include:</p>
-                  <ul>
-                    <li><p>Switch the positions around your résumé if some particular experiences are more relevant to a
-                        certain job you are applying for.</p></li>
-                    <li><p>Include between 2-4 jobs that are relevant to the one you are applying for. </p></li>
-                    <li><p>Try to begin each sentence with an action verb when you write the
-                        Accomplishments/Responsibilities or Tasks. </p></li>
-                    <li><p>Quantify your Accomplishments/Responsibilities or Tasks whenever this is possible. (E.g.:
-                        “Increased customer base by 25% following a series of dedicated sales campaigns.”) </p></li>
-                    <li><p>You need to make it clear in this section how your current work experience makes you the
-                        ideal candidate for the position you are applying for. </p></li>
-                    <li><p>you the ideal candidate for the position you are applying for. If you did not have any
-                        Accomplishments in the previous job and decide to list previous tasks, remember not to list the
-                        ones that are too general or vague, but rather focus on the specific ones. </p></li>
-                  </ul>
+                  <p>Optionally you can add Accomplishments/Responsibilities or Tasks tags or write them in the description field.</p></li></p>
                 </div>
               </div>
             </div>
@@ -168,22 +142,20 @@
               </div>
               <div class="x_content">
                 <div class="col-md-12 col-lg-12 col-sm-12">
-                  <p>Firstly, the focus should be on presenting your skills and personality traits but at the same time
-                    remember that it is important not to lie or exaggerate the abilities that you do not posses. </p>
-                  <p>Always keep in mind that sometimes <b>“Less, Is More!”</b></p>
-                  <p class="p-near-ul">The first part of your résumé is the Header which needs to include the following
-                    information:</p>
+                  <p>The is another important section of your résumé in the case you have a couple of years of
+                    related work experience for the job you are applying for.</p>
+                  <p class="p-near-ul">The mandatory information for this section is: </p>
                   <ul>
-                    <li><p><b>Picture</b>: this is optional, depending on the country/culture you are applying.</p></li>
-                    <li><p><b>Email Address</b>: your email should be just your name or some professional variations of
-                        it.</p></li>
-                    <li><p><b>Phone Number</b>: make sure to write the number where you are available most of the time.
-                      </p></li>
-                    <li><p><b>Address</b>: listing your City/Country is mandatory. This is especially needed when your
-                        application is being scanned by an ATS software.</p></li>
-                    <li><p><b>Social Media Profiles</b>: Make an audit of your social media profiles and be sure you do
-                        not have any content that might create a bad impression about you.</p></li>
+                    <li>Title of your project</li>
+                    <li>Employment Period</li>
+                    <li>Your role in this project</li>
                   </ul>
+                  <p>Optionally you can add Skill or other tags to label the tools/equipments/methodology you used in this project.</p></li></p>
+                  <p>
+                    Include the most important personal project that you have worked on. These could be semester projects or projects that you worked on in your own free time.
+                    List the name of the project, a short description of what the project was about, what kind of knowledge did you apply, and what skills did you develop while working on it.
+                  </p>
+
                 </div>
               </div>
             </div>
@@ -201,20 +173,13 @@
               </div>
               <div class="x_content">
                 <div class="col-md-12 col-lg-12 col-sm-12">
-                  <p>List all your important Achievements and Certificates that you have obtained and are to some extent
-                    related to the job you are applying for. </p>
-                  <p class="p-near-ul"><i>Examples of Achievements: </i></p>
+                  <p>You can add your published works/papers/patents in this section.</p>
+                  <p>Mandatory fields are:</p>
                   <ul>
-                    <li><p>Employee of the Month - January and March 2016</p></li>
-                    <li><p>Nominated as a team leader in various projects across 3 departments. </p></li>
-                    <li><p>Finished “X” project 2 weeks before the deadline. </p></li>
+                    <li>Name of the publication</li>
+                    <li>Co-others</li>
+                    <li>Date</li>
                   </ul>
-                  <br>
-                  <p class="p-near-ul"><i>Examples of Achievements: </i></p>
-                  <ul>
-                    <li><p>Certified Professional Crisis Manager for ISO 292 Security Management (2011)</p></li>
-                    <li><p>Risk Management course at Novoschool (2016) </p></li>
-                    <li><p>CPL - Commercial Pilot Licence (2008) </p></li>
                   </ul>
                 </div>
               </div>
@@ -232,9 +197,22 @@
               </div>
               <div class="x_content">
                 <div class="col-md-12 col-lg-12 col-sm-12">
-                  <p>It is important to include the conferences and professional courses you have completed, especially
-                    the ones where you held a presentation or were part of the organizers. </p>
-                  <p>Conferences add value especially for the fresh graduates who lack work experience. </p>
+                  <p>You can add honors/achievements/certifications in this section. This will give the audience a better idea about you.</p>
+                  <p>Mandatory fields are:</p>
+                  <ul>
+                    <li>Name of the honor</li>
+                    <li>The name of the Issuer</li>
+                    <li>Date</li>
+                  </ul>
+                  <p>List all your important Achievements and Certificates that you have obtained and are to some extent
+                    related to the job you are applying for. </p>
+                  <p class="p-near-ul"><i>Examples of Achievements: </i></p>
+                  <ul>
+                    <li>Employee of the Month - January and March 2016</li>
+                    <li>Nominated as a team leader in various projects across 3 departments.</li>
+                    <li>Certified Professional Crisis Manager for ISO 292 Security Management (2011)</li>
+                    <li>Machine Learning course at Coursera (2016)</li>
+                  </ul>
               </div>
             </div>
           </div>
@@ -273,22 +251,23 @@
               </div>
               <div class="x_content">
                 <div class="col-md-12 col-lg-12 col-sm-12">
-                  <p>Firstly, the focus should be on presenting your skills and personality traits but at the same time
-                    remember that it is important not to lie or exaggerate the abilities that you do not posses. </p>
-                  <p>Always keep in mind that sometimes <b>“Less, Is More!”</b></p>
-                  <p class="p-near-ul">The first part of your résumé is the Header which needs to include the following
-                    information:</p>
-                  <ul>
-                    <li><p><b>Picture</b>: this is optional, depending on the country/culture you are applying.</p></li>
-                    <li><p><b>Email Address</b>: your email should be just your name or some professional variations of
-                        it.</p></li>
-                    <li><p><b>Phone Number</b>: make sure to write the number where you are available most of the time.
-                      </p></li>
-                    <li><p><b>Address</b>: listing your City/Country is mandatory. This is especially needed when your
-                        application is being scanned by an ATS software.</p></li>
-                    <li><p><b>Social Media Profiles</b>: Make an audit of your social media profiles and be sure you do
-                        not have any content that might create a bad impression about you.</p></li>
-                  </ul>
+                  <p><b>Social Media Profiles</b>: The social media icons will appear on your resume and the user will be redirected to the url you provide in this page. Make an audit of your social media profiles and be sure you do
+                        not have any content that might create a bad impression about you.</p>
+                  <p>
+                    We currently support following social media hyperlinks:
+                    <ul>
+                      <li>LinkedIn</li>
+                      <li>Twitter</li>
+                      <li>Github</li>
+                      <li>Facebook</li>
+                      <li>Google</li>
+                      <li>Skype</li>
+                      <li>Flickr</li>
+                      <li>Instagram</li>
+                      <li>Tumblr</li>
+                      <li>Youtube</li>
+                    </ul>
+                  </p>
                 </div>
               </div>
             </div>

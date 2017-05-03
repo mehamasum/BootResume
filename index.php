@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['user'])) {
     ob_start();
-    header('Location: dashboard/basic.php');
+    header('Location: dashboard/index.php');
     ob_end_flush();
     die();
 }

@@ -57,10 +57,22 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select id="theme" class="form-control">
-                            <option value="00">Default</option>
+                            <option value="0">Default</option>
                           </select>
                         </div>
                       </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="top">Top Section <label class="label label-primary">Coming Soon</label>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select id="top" class="form-control">
+                            <option value="0">Education</option>
+                            <option value="0">Experience</option>
+                          </select>
+                        </div>
+                      </div>
+
 
                       <div id="delete_modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog modal-sm">
@@ -94,12 +106,6 @@
 
                         </div>
                       </div>
-
-
-
-
-                      <div class="ln_solid"></div>
-
 
 
 
