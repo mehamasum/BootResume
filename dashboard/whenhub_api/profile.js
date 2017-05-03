@@ -26,7 +26,7 @@ function get_profile (username) {
     }, function (data) {
 
         if(data.includes("error")){
-
+            console.log("error ocurred");
             window.location.href="dashboard/page_404.html";
         }
         else{
@@ -136,7 +136,7 @@ function make_education() {
             url=x.url;
             label=x.label;
 
-            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['EDU'][i].name+'</strong></a>';
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" class="tip" title="'+label+'"><strong>'+all['EDU'][i].name+'</strong></a>';
         }
 
         temp+='<li>';
@@ -207,7 +207,7 @@ function make_experience() {
             url=x.url;
             label=x.label;
 
-            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['EXP'][i].name+'</strong></a>';
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" class="tip" title="'+label+'"><strong>'+all['EXP'][i].name+'</strong></a>';
         }
 
         temp+='<li>';
@@ -276,7 +276,7 @@ function make_project() {
             url=x.url;
             label=x.label;
 
-            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['PRO'][i].name+'</strong></a>';
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" class="tip" title="'+label+'"><strong>'+all['PRO'][i].name+'</strong></a>';
         }
 
 
@@ -334,7 +334,7 @@ function make_publication() {
             url=x.url;
             label=x.label;
 
-            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['PUB'][i].name+'</strong></a>';
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" class="tip" title="'+label+'"><strong>'+all['PUB'][i].name+'</strong></a>';
         }
 
 
@@ -399,7 +399,7 @@ function make_honors() {
             url=x.url;
             label=x.label;
 
-            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['HON'][i].name+'</strong></a>';
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" class="tip" title="'+label+'"><strong>'+all['HON'][i].name+'</strong></a>';
         }
 
 
@@ -475,7 +475,7 @@ function make_activity() {
             url=x.url;
             label=x.label;
 
-            a_or_span= '<a href="'+url+'" data-toggle="tooltip" title="'+label+'"><strong>'+all['ACT'][i].name+'</strong></a>';
+            a_or_span= '<a href="'+url+'" data-toggle="tooltip" class="tip" title="'+label+'"><strong>'+all['ACT'][i].name+'</strong></a>';
         }
 
 
