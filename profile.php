@@ -12,10 +12,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title><?php echo $_GET['u']." | Boot Resume";   ?></title>
+    <title><?php echo $_GET['u']." | Elegant Resume";   ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TAG_LINE_ABOUT_YOU">
-    <meta name="author" content="YOUR_NAME">
+    <meta name="description" content="Build your personal resume web app with Elegant Resume">
+    <meta name="author" content="Elegant Resume | Team Batfia">
 
     <!-- Le styles -->
     <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
