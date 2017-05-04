@@ -1,9 +1,9 @@
 <?php
-/*$a_host= 'localhost';
+$a_host= 'localhost';
 $a_user= 'root';
-$a_pass= '';
+//$a_pass= '';
 $a_db= 'elegantres';
-$a_pass='rifat007';
+//$a_pass='rifat007';
 $a_pass='3BnCPnAc'; // server
 
 // Create connection
@@ -14,12 +14,12 @@ if (!$conn) {
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
     exit;
-}*/
+}
 
 
 
 
-    $connectstr_dbhost = '';
+    /*$connectstr_dbhost = '';
     $connectstr_dbname = '';
     $connectstr_dbusername = '';
     $connectstr_dbpassword = '';
@@ -39,7 +39,7 @@ if (!$conn) {
         echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
         echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
         exit;
-    }
+    }*/
 
 
 ?>
