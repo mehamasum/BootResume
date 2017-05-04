@@ -641,7 +641,7 @@ function make_social(username) {
                 }
 
 
-                temp+='<a style="text-decoration: none" href="'+
+                temp+='<a style="text-decoration: none; margin-left: 5px;" href="'+
                     ara[0][i+1]+'" title="'+title[i]+'"><i class="fa fa-'+fa[i] +'"></i></a>';
 
             }
