@@ -1,5 +1,5 @@
 <?php
-    if($_GET['username']==null || strcmp($_GET['username'],"")==0 ){
+    if($_GET['u']==null || strcmp($_GET['u'],"")==0 ){
         ob_start();
         header('Location: dashboard/page_404.html');
         ob_end_flush();
@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title><?php echo $_GET['username']." | Boot Resume";   ?></title>
+    <title><?php echo $_GET['u']." | Boot Resume";   ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="TAG_LINE_ABOUT_YOU">
     <meta name="author" content="YOUR_NAME">
@@ -177,7 +177,7 @@
 <script>
     window.onload = function() {
         console.log("ready");
-        get_profile('<?php echo $_GET['username']?>');
+        get_profile('<?php echo $_GET['u']?>');
     };
 </script>
 
