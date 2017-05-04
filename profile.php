@@ -177,7 +177,7 @@
 <div class="container">
     <div class="row">
 			<span class="span8 offset2 text-center">
-				<p><small>© 2017 <a href="dashboard/login.php">Elegant Resume</a></small></p>
+				<p><small>© 2017 <a href="index.php">Elegant Resume Beta</a></small></p>
 			</span>
     </div>
 </div>
