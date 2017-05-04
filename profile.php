@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Build your personal resume web app with Elegant Resume">
     <meta name="author" content="Elegant Resume | Team Batfia">
+    <link rel="image_src" href="build/ico/favicon.png" />
 
     <!-- Le styles -->
     <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
