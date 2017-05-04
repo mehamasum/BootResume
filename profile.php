@@ -132,7 +132,7 @@
 
 
         <div id="experience-block">
-            <h3><i class="fa fa-briefcase"></i> Work</h3>
+            <h3><i class="fa fa-briefcase"></i> Experience</h3>
             <div id="experience">
 
             </div>
