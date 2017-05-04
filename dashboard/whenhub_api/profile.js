@@ -140,7 +140,7 @@ function make_education() {
         }
 
         temp+='<li>';
-        temp+=a_or_span+', '+all['EDU'][i].customFieldData.degree+' '+ all['EDU'][i].customFieldData.area+', '+timePeriodStr+'<br>';
+        temp+=a_or_span+', '+all['EDU'][i].customFieldData.degree+' - '+ all['EDU'][i].customFieldData.area+', '+timePeriodStr+'<br>';
 
         temp+=get_label(all['EDU'][i]);
 
