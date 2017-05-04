@@ -1839,29 +1839,6 @@ if (typeof NProgress != 'undefined') {
 			
 			if( typeof (PNotify) === 'undefined'){ return; }
 			console.log('init_PNotify');
-			
-			new PNotify({
-			  title: "PNotify",
-			  type: "info",
-			  text: "Welcome. Try hovering over me. You can click things behind me, because I'm non-blocking.",
-			  nonblock: {
-				  nonblock: true
-			  },
-			  addclass: 'dark',
-			  styling: 'bootstrap3',
-			  hide: false,
-			  before_close: function(PNotify) {
-				PNotify.update({
-				  title: PNotify.options.title + " - Enjoy your Stay",
-				  before_close: null
-				});
-
-				PNotify.queueRemove();
-
-				return false;
-			  }
-			});
-
 		}; 
 	   
 	   
@@ -5027,40 +5004,40 @@ if (typeof NProgress != 'undefined') {
 	   
 	$(document).ready(function() {
 				
-		init_sparklines();
-		init_flot_chart();
+		//init_sparklines();
+		//init_flot_chart();
 		init_sidebar();
-		init_wysiwyg();
-		init_InputMask();
-		init_JQVmap();
-		init_cropper();
-		init_knob();
-		init_IonRangeSlider();
-		init_ColorPicker();
-		init_TagsInput();
+		//init_wysiwyg();
+		//init_InputMask();
+		//init_JQVmap();
+		//init_cropper();
+		//init_knob();
+		//init_IonRangeSlider();
+		//init_ColorPicker();
+		//init_TagsInput();
 		init_parsley();
-		init_daterangepicker();
-		init_daterangepicker_right();
-		init_daterangepicker_single_call();
-		init_daterangepicker_reservation();
-		init_SmartWizard();
-		init_EasyPieChart();
-		init_charts();
-		init_echarts();
-		init_morris_charts();
-		init_skycons();
+		//init_daterangepicker();
+		//init_daterangepicker_right();
+		//init_daterangepicker_single_call();
+		//init_daterangepicker_reservation();
+		//init_SmartWizard();
+		//init_EasyPieChart();
+		//init_charts();
+		//init_echarts();
+		//init_morris_charts();
+		//init_skycons();
 		init_select2();
 		init_validator();
-		init_DataTables();
-		init_chart_doughnut();
-		init_gauge();
+		//init_DataTables();
+		//init_chart_doughnut();
+		//init_gauge();
 		init_PNotify();
-		init_starrr();
-		init_calendar();
-		init_compose();
+		//init_starrr();
+		//init_calendar();
+		//init_compose();
 		init_CustomNotification();
 		init_autosize();
-		init_autocomplete();
+		//init_autocomplete();
 				
 	});	
 	

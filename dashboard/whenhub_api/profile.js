@@ -48,7 +48,7 @@ function get_profile (username) {
 
 
             document.getElementById("basic-mob").innerHTML='<img src="'+image+'" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>'+
-                '<h3 class="media-heading" style="margin-top: 10px">'+ara[0][6] +'<small>'+ara[0][8]+'</small></h3>'+
+                '<h3 class="media-heading" style="margin-top: 10px">'+ara[0][6] +" " +'<small>'+ara[0][8]+'</small></h3>'+
                 '<span class="">'+ara[0][3]+' | '+ara[0][4]+'</span>';
 
             if(ara[0][7].length>0) {
@@ -147,7 +147,7 @@ function make_education() {
         var desp= all['EDU'][i].description;
 
         if(desp!=null){
-            temp+='<br><br>'+desp;
+            temp+='<br class="fat_br">'+desp;
         }
 
         temp+='</li><br>';
@@ -217,7 +217,7 @@ function make_experience() {
 
         var desp= all['EXP'][i].description;
         if(desp!=null){
-            temp+='<br><br>'+desp;
+            temp+='<br class="fat_br">'+desp;
         }
 
         temp+='</li><br>';
@@ -287,7 +287,7 @@ function make_project() {
 
         var desp= all['PRO'][i].description;
         if(desp!=null){
-            temp+='<br><br>'+desp;
+            temp+='<br class="fat_br">'+desp;
         }
 
         temp+='</li><br>';
@@ -353,7 +353,7 @@ function make_publication() {
 
         var desp= all['PUB'][i].description;
         if(desp!=null){
-            temp+='<br><br>'+desp;
+            temp+='<br class="fat_br">'+desp;
         }
 
         temp+='</li><br>';
@@ -418,7 +418,7 @@ function make_honors() {
 
         var desp= all['HON'][i].description;
         if(desp!=null){
-            temp+='<br><br>'+desp;
+            temp+='<br class="fat_br">'+desp;
         }
 
         temp+='</li><br>';
@@ -494,7 +494,7 @@ function make_activity() {
 
         var desp= all['ACT'][i].description;
         if(desp!=null){
-            temp+='<br><br>'+desp;
+            temp+='<br class="fat_br">'+desp;
         }
 
         temp+='</li><br>';
