@@ -281,7 +281,7 @@ function make_project() {
 
 
         temp+='<li>';
-        temp+=a_or_span+', '+all['PRO'][i].customFieldData.role+' , '+timePeriodStr+'<br>';
+        temp+=a_or_span+', '+all['PRO'][i].customFieldData.role+', '+timePeriodStr+'<br>';
 
         temp+=get_label(all['PRO'][i]);
 
