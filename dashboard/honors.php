@@ -45,7 +45,7 @@ $schedule_id = $_SESSION['schedule_id'];  // "58fa07bbc7ddaa3b7464e0ac";
                 <div class="clearfix"></div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
                                 <h4>All Honors/Accomplishments/Awards</h4>

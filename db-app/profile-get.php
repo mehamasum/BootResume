@@ -18,13 +18,17 @@ $sql= "select * FROM users WHERE username='".$username."';";
 
 if(($result=$conn->query($sql))==TRUE){
 
-    $jsonData = array();
 
-    while ($array = mysqli_fetch_row($result)) {
-        $jsonData[] = $array;
+    if($result->num_rows == 0) echo "error";
+    else {
+        $jsonData = array();
+
+        while ($array = mysqli_fetch_row($result)) {
+            $jsonData[] = $array;
+        }
+
+        echo json_encode($jsonData);
     }
-
-    echo json_encode($jsonData);
 }
 else{
     echo "error";
