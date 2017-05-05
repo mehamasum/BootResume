@@ -573,7 +573,7 @@ function get_events(scheduleId) {
 
 
             // meha added sort:
-            
+
             for(var all_it =0; all_it<6; all_it++) {
                 all[def_tags[all_it]].sort(function(a,b){
                     // Turn your strings into dates, and then subtract them
