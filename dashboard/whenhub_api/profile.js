@@ -13,6 +13,8 @@ all['ACT']=[];
 all['PUB']=[];
 all['HON']=[];
 
+var def_tags = ['EDU', 'EXP', 'PRO', 'ACT', 'PUB', 'HON'];
+
 var monthName=['dummy','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 
@@ -568,6 +570,22 @@ function get_events(scheduleId) {
 
                 }
             }
+
+
+            // meha added sort:
+            
+            for(var all_it =0; all_it<6; all_it++) {
+                all[def_tags[all_it]].sort(function(a,b){
+                    // Turn your strings into dates, and then subtract them
+                    // to get a value that is either negative, positive, or zero.
+                    console.log(new Date(b['when']['startDate']) - new Date(a['when']['startDate']));
+                    return new Date(b['when']['startDate']) - new Date(a['when']['startDate']);
+                });
+            }
+            console.log("after sort:");
+            console.log(all);
+
+
         },
         error: function(xhr, statusText, err){
             console.log("Error: " + xhr.status);
