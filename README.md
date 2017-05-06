@@ -1,4 +1,4 @@
-#Elegant Resume (Beta)
+# Elegant Resume (Beta)
 ## Testing Instructions
 
 __Root directory:__ http://bitnami-lampstack-6f53.cloudapp.net/ElegantResume  
