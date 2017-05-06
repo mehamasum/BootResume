@@ -4,9 +4,9 @@
     $a_user= 'root';
     $a_db= 'elegantres';
 
-    $a_pass= '';
+    //$a_pass= '';
     //$a_pass='rifat007';
-    //$a_pass='3BnCPnAc'; // server
+    $a_pass='3BnCPnAc'; // server
 
     // Create connection
     $conn = mysqli_connect($a_host, $a_user, $a_pass, $a_db);
