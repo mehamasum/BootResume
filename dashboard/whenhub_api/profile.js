@@ -39,7 +39,7 @@ function get_profile (username) {
             schid=ara[0][5];
             var image;
 
-            if(ara[0][9].length>0)
+            if(ara[0][9]!== null)
                 image="./"+ara[0][9];
             else
                 image= 'images/avatar.png';
