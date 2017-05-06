@@ -53,7 +53,7 @@ function get_profile (username) {
                 '<h3 class="media-heading" style="margin-top: 10px">'+ara[0][6] +" " +'<small>'+ara[0][8]+'</small></h3>'+
                 '<span class="">'+ara[0][3]+' | '+ara[0][4]+'</span>';
 
-            if(ara[0][7].length>0) {
+            if(ara[0][7]!== null) {
                 document.getElementById("objective").innerHTML = '<h3><i class="fa fa-check-square-o"></i> Objective</h3>'
                     + ' <ul style="padding-bottom:5px;">'
                     + ara[0][7]
