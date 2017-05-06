@@ -11,12 +11,12 @@
 //require_once('dbconnect_u.php');
 require_once('db_local.php');
 
-$username= $_POST['profile'];
+$username= mysqli_real_escape_string($conn, $_POST['profile']);
 
 $sql= "select * FROM users WHERE username='".$username."';";
 
 
-if(($result=$conn->query($sql))==TRUE){
+if(($result=$conn->query($sql))==TRUE) {
 
 
     if($result->num_rows == 0) echo "error";

@@ -10,10 +10,10 @@ session_start();
 //require_once('dbconnect_u.php');
 require_once('db_local.php');
 
-$username = $_POST['username'];
-$password = md5($_POST['password']);
-$email = $_POST['email'];
-$fullname = $_POST['fullname'];
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$password = md5(mysqli_real_escape_string($conn, $_POST['password']));
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
 
 
 $username_check = "SELECT * FROM users WHERE username = '". $username."';";

@@ -12,8 +12,8 @@ session_start();
 //require_once('dbconnect_v.php');
 require_once('db_local.php');
 
-$username = $_POST['username'];
-$password = md5($_POST['password']);
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$password = md5(mysqli_real_escape_string($conn, $_POST['password']));
 //$password = $_POST['password'];
 
 $sql = "SELECT * FROM users WHERE username = '". $username."' AND password= '".$password."';";
@@ -28,4 +28,5 @@ if($result = $conn->query($sql)){
         echo "success";
     }
 }
-else echo $conn->error;
+else
+    echo "Something went wrong";

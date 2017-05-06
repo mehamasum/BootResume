@@ -32,7 +32,8 @@
                 </div>
 
                 <div>
-                <input type="text" id="login_username" class="form-control" placeholder="Username" data-parsley-required="true" />
+                <input type="text" id="login_username" class="form-control" placeholder="Username" data-parsley-required="true" data-parsley-pattern="^[A-Za-z0-9._]*$"
+                       data-parsley-pattern-message="Only alphanumeric characters with dot and underscore"/>
               </div>
               <div>
                 <input type="password" id="login_password" class="form-control" placeholder="Password" data-parsley-required="true" />
@@ -73,7 +74,8 @@
 
 
                 <div>
-                    <input id="signup_username" type="text" class="form-control" placeholder="Username" data-parsley-required="true" />
+                    <input id="signup_username" type="text" class="form-control" placeholder="Username" data-parsley-required="true" data-parsley-pattern="^[A-Za-z0-9._]*$"
+                           data-parsley-pattern-message="Only alphanumeric characters with dot and underscore"/>
                 </div>
 
                 <div>
@@ -81,7 +83,8 @@
                 </div>
 
                 <div>
-                    <input id="signup_fullname" type="text" class="form-control" placeholder="Full Name" data-parsley-required="true" />
+                    <input id="signup_fullname" type="text" class="form-control" placeholder="Full Name" data-parsley-required="true" data-parsley-pattern="^[A-Za-z0-9 ]*$"
+                           data-parsley-pattern-message="Only alphanumeric characters"/>
                 </div>
 
                 <div>

@@ -1,5 +1,5 @@
 <?php
-    if($_GET['u']==null || strcmp($_GET['u'],"")==0 ){
+    if(!isset($_GET['u']) || empty($_GET['u']) ){
         ob_start();
         header('Location: dashboard/page_404.html');
         ob_end_flush();
