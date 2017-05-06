@@ -50,10 +50,8 @@ function delete_schedule(id) {
             console.log(xhr.status+" "+statusText);
         },
         success: function (data) {
-            console.log(xhr);
-            console.log(statusText);
-            console.log(err);
-            //window.location.href = "account_deleted.php";
+            console.log(data);
+            window.location.href = "account_deleted.php";
         },
         error: function(xhr, statusText, err){
             console.log(xhr);
