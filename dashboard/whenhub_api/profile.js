@@ -42,7 +42,7 @@ function get_profile (username) {
             if(ara[0][9]!== null)
                 image="./"+ara[0][9];
             else
-                image= 'images/avatar.png';
+                image= 'dashboard/images/avatar.png';
 
             document.getElementById("basic-normal").innerHTML='<img src="'+image+'" name="aboutme" width="100" height="100" border="0" class="img-circle"></a>'+
                 '<h3 class="media-heading" style="margin-top: 10px">'+ara[0][6]+" " +'<small>'+ara[0][8]+'</small></h3>'+
