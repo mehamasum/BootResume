@@ -5,6 +5,15 @@
         ob_end_flush();
         die();
     }
+
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $user = test_input($_GET['u']);
 ?>
 
 
@@ -12,7 +21,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title><?php echo $_GET['u']." | Elegant Resume";   ?></title>
+    <title><?php echo $user." | Elegant Resume";   ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Build your personal resume web app with Elegant Resume">
     <meta name="author" content="Elegant Resume | Team Batfia">
@@ -193,7 +202,7 @@
 <script>
     window.onload = function() {
         console.log("ready");
-        get_profile('<?php echo $_GET['u']?>');
+        get_profile("<?php echo $user?>");
     };
 </script>
 
