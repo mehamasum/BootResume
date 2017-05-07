@@ -6,7 +6,7 @@
 
 
 <div class="form-group">
-    <label class="text-right col-md-3 col-sm-3 col-xs-12" for="skill">Skill/Tool
+    <label class="text-right col-md-3 col-sm-3 col-xs-12" for="skill">Tools/Technology/Methodology
         <small style="color: #5bc0de; font-size: medium">&#9724;</small>
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -22,7 +22,7 @@
     </div>
 </div>
 <div class="form-group">
-    <label class="text-right col-md-3 col-sm-3 col-xs-12" for="subject">Type/Subject
+    <label class="text-right col-md-3 col-sm-3 col-xs-12" for="subject">Topic/Subject
         <small style="color: #337ab7; font-size: medium">&#9724;</small>
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
