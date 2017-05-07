@@ -61,10 +61,12 @@
                   <p>Firstly, the focus should be on presenting your skills and personality traits but at the same time
                     remember that it is important not to lie or exaggerate the abilities that you do not posses. </p>
                   <p>Always keep in mind that sometimes <b>“Less, Is More!”</b></p>
+                  <br>
                   <p class="p-near-ul">The first part of your résumé is the Header which needs to include the following
                     information:</p>
                   <ul>
                     <li><p><b>Picture</b>: Pick a professional picture, resize or crop it as necessary after uploading</p></li>
+                    <li><p><b>Name</b>: Not your username, your actual name</p></li>
                     <li><p><b>Country</b>: Listing your Country is mandatory. This is especially needed when your
                         application is being scanned by an ATS software.</p></li>
                     <li><p><b>Email Address</b>: your email should be just your name or some professional variations of
@@ -101,6 +103,14 @@
                     <li>Time line</li>
                   </ul>
 
+                  <p>
+                    <strong>Action on School Names:</strong>
+                    <ul>
+                      <li>Action Button Title: Tooltip that will appear when someone hover on the School Name </li>
+                      <li>Action Button Url: The url someone will be redirected to on clicking the School Name </li>
+                    </ul>
+                  </p>
+
                 </div>
               </div>
             </div>
@@ -126,6 +136,13 @@
                     <li>Position/Title/Role </li>
                   </ul>
                   <p>Optionally you can add Accomplishments/Responsibilities or Tasks tags or write them in the description field.</p></li></p>
+                  <p>
+                    <strong>Action on Company Names:</strong>
+                  <ul>
+                    <li>Action Button Title: Tooltip that will appear when someone hover on the Company Name </li>
+                    <li>Action Button Url: The url someone will be redirected to on clicking the Company Name </li>
+                  </ul>
+                  </p>
                 </div>
               </div>
             </div>
@@ -156,6 +173,14 @@
                     List the name of the project, a short description of what the project was about, what kind of knowledge did you apply, and what skills did you develop while working on it.
                   </p>
 
+                  <p>
+                    <strong>Action on Project Names:</strong>
+                  <ul>
+                    <li>Action Button Title: Tooltip that will appear when someone hover on the Project Name </li>
+                    <li>Action Button Url: The url someone will be redirected to on clicking the Project Name </li>
+                  </ul>
+                  </p>
+
                 </div>
               </div>
             </div>
@@ -180,7 +205,13 @@
                     <li>Co-others</li>
                     <li>Date</li>
                   </ul>
+                  <p>
+                    <strong>Action on Publication Names:</strong>
+                  <ul>
+                    <li>Action Button Title: Tooltip that will appear when someone hover on the Publication Name </li>
+                    <li>Action Button Url: The url someone will be redirected to on clicking the Publication Name </li>
                   </ul>
+                  </p>
                 </div>
               </div>
             </div>
@@ -213,6 +244,14 @@
                     <li>Certified Professional Crisis Manager for ISO 292 Security Management (2011)</li>
                     <li>Machine Learning course at Coursera (2016)</li>
                   </ul>
+
+                  <p>
+                    <strong>Action on Achievement:</strong>
+                  <ul>
+                    <li>Action Button Title: Tooltip that will appear when someone hover on the Achievement </li>
+                    <li>Action Button Url: The url someone will be redirected to on clicking the Achievement </li>
+                  </ul>
+                  </p>
               </div>
             </div>
           </div>
@@ -235,6 +274,14 @@
                     showing as well that you are adaptable and self-motivated. </p>
                   <p>You can also research the employer and see what causes they care about, then mirror those in your
                     volunteer experience if you had related experiences. </p>
+
+                  <p>
+                    <strong>Action on Activity Names:</strong>
+                  <ul>
+                    <li>Action Button Title: Tooltip that will appear when someone hover on the Activity Name </li>
+                    <li>Action Button Url: The url someone will be redirected to on clicking the Activity Name </li>
+                  </ul>
+                  </p>
                 </div>
               </div>
             </div>
