@@ -6,7 +6,7 @@
 
 
 <div class="form-group">
-    <label class="text-right col-md-3 col-sm-3 col-xs-12" for="skill">Tools/Technology/Methodology
+    <label class="text-right col-md-3 col-sm-3 col-xs-12" for="skill">Tools/Techs/Methods
         <small style="color: #5bc0de; font-size: medium">&#9724;</small>
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
